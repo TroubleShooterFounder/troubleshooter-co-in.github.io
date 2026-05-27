@@ -110,6 +110,7 @@ img {
     font-weight: 800;
     color: var(--white);
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -1146,6 +1147,14 @@ img {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-brand .logo-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 1px;
 }
 
 .footer-col p {
@@ -1279,6 +1288,15 @@ img {
     
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .logo-text {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+    
+    .footer-brand .logo-text {
+        font-size: 17px;
     }
     
     .hero {
