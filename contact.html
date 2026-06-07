@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Troubleshooter | Get Free Consultation</title>
-    <meta name="description" content="Contact Troubleshooter for e-Discovery, Cyber Security, and IT Support Services. Get a free consultation today.">
+    <title>Contact Us - Trouble Shooters | Get Free Consultation</title>
+    <meta name="description" content="Contact Trouble Shooters for e-Discovery, Cyber Security, and IT Support Services. Get a free consultation today. 24/7 emergency response available.">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,14 +16,42 @@
         <div class="container">
             <div class="nav-brand">
                 <a href="index.html">
-                    <span class="logo-icon"><i class="fas fa-shield-halved"></i></span>
-                    <span class="logo-text">TROUBLESHOOTER</span>
+                    <img src="images/logo.png" alt="Trouble Shooters" class="nav-logo">
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-name">TROUBLE SHOOTERS</span>
+                        <span class="nav-brand-tagline">Cyber Security Experts</span>
+                    </div>
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <div class="nav-dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="nav-dropdown-menu">
+                        <a href="services/ediscovery.html" class="nav-dropdown-item">
+                            <i class="fas fa-magnifying-glass-chart"></i> e-Discovery
+                        </a>
+                        <a href="services/data-breach-response.html" class="nav-dropdown-item">
+                            <i class="fas fa-shield-virus"></i> Data Breach Response
+                        </a>
+                        <a href="services/incident-response.html" class="nav-dropdown-item">
+                            <i class="fas fa-user-shield"></i> Incident Response
+                        </a>
+                        <a href="services/document-review.html" class="nav-dropdown-item">
+                            <i class="fas fa-file-shield"></i> Document Review
+                        </a>
+                        <a href="services/clm.html" class="nav-dropdown-item">
+                            <i class="fas fa-file-contract"></i> CLM
+                        </a>
+                        <a href="services/it-support.html" class="nav-dropdown-item">
+                            <i class="fas fa-headset"></i> IT Support
+                        </a>
+                    </div>
+                </div>
+                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
                 <a href="contact.html" class="nav-btn">Get Started</a>
             </div>
@@ -47,7 +75,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="contact-section">
+    <section class="section">
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Form -->
@@ -62,15 +90,15 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                                <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company/Organization</label>
+                            <label for="company">Company / Organization</label>
                             <input type="text" id="company" name="company" placeholder="Enter company name">
                         </div>
                         <div class="form-group">
@@ -84,12 +112,12 @@
                                 <option value="CLM">Contract Lifecycle Management</option>
                                 <option value="IT Support">IT Support Services</option>
                                 <option value="Multiple Services">Multiple Services</option>
-                                <option value="Other">Other</option>
+                                <option value="Other">Other / Custom Solution</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe your requirements..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your requirements in detail..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg btn-full">
                             <i class="fas fa-paper-plane"></i> Send Message
@@ -115,7 +143,7 @@
                         <div class="info-icon"><i class="fas fa-location-dot"></i></div>
                         <h4>Location</h4>
                         <p>India</p>
-                        <p>Remote Services Available Nationwide</p>
+                        <p>Remote Services Nationwide</p>
                     </div>
                     <div class="info-card emergency">
                         <div class="info-icon"><i class="fas fa-triangle-exclamation"></i></div>
@@ -128,39 +156,101 @@
         </div>
     </section>
 
+    <!-- QUICK CONTACT OPTIONS -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-headset"></i> Quick Connect</span>
+                <h2 class="section-title">Multiple Ways to <span class="gradient-text">Reach Us</span></h2>
+                <p class="section-subtitle">Choose your preferred mode of communication</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-item" style="text-align: center;">
+                    <div class="why-icon" style="margin: 0 auto 20px;"><i class="fab fa-whatsapp"></i></div>
+                    <h4>WhatsApp</h4>
+                    <p>Chat with us instantly on WhatsApp for quick queries and support.</p>
+                    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="service-link" style="margin-top: 15px; display: inline-flex;">Chat Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="why-item" style="text-align: center;">
+                    <div class="why-icon" style="margin: 0 auto 20px;"><i class="fas fa-calendar-check"></i></div>
+                    <h4>Schedule a Call</h4>
+                    <p>Book a free 30-minute consultation call with our experts at your convenience.</p>
+                    <a href="contact.html" class="service-link" style="margin-top: 15px; display: inline-flex;">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="why-item" style="text-align: center;">
+                    <div class="why-icon" style="margin: 0 auto 20px;"><i class="fas fa-envelope-open-text"></i></div>
+                    <h4>Email Support</h4>
+                    <p>Send us detailed queries via email and get comprehensive responses within 24 hours.</p>
+                    <a href="mailto:info@troubleshooter.co.in" class="service-link" style="margin-top: 15px; display: inline-flex;">Email Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-brand">
-                        <span class="logo-icon"><i class="fas fa-shield-halved"></i></span>
-                        <span class="logo-text">TROUBLESHOOTER</span>
+                        <img src="images/logo.png" alt="Trouble Shooters" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">TROUBLE SHOOTERS</span>
+                            <span class="footer-brand-tagline">Cyber Security Experts</span>
+                        </div>
                     </div>
-                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services.</p>
+                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services. Protecting businesses across India with expert solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services/ediscovery.html">e-Discovery</a></li>
+                        <li><a href="services/data-breach-response.html">Data Breach Response</a></li>
+                        <li><a href="services/incident-response.html">Cyber Incident Response</a></li>
+                        <li><a href="services/document-review.html">Document Review</a></li>
+                        <li><a href="services/clm.html">CLM</a></li>
+                        <li><a href="services/it-support.html">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> Hr@troubleshooter.co.in</p>
-                        <p><i class="fas fa-phone"></i> +91-7015111465</p>
+                        <p><i class="fas fa-envelope"></i> info@troubleshooter.co.in</p>
+                        <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                        <p><i class="fas fa-location-dot"></i> India</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Troubleshooter.co.in | All Rights Reserved</p>
+                <p>&copy; 2024 Trouble Shooters. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="js/main.js"></script>
 </body>
