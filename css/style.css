@@ -176,9 +176,9 @@ button {
 }
 
 .nav-logo {
-    height: 45px;
+    height: 60px;
     width: auto;
-    filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.4));
+    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.5));
     transition: var(--transition);
 }
 
@@ -1767,8 +1767,9 @@ button {
 }
 
 .footer-logo {
-    height: 45px;
+    height: 65px;
     width: auto;
+    margin-bottom: 20px;
 }
 
 .footer-brand-text {
