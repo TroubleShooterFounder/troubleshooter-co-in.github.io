@@ -1,99 +1,136 @@
 // ==========================================
-// TROUBLESHOOTER.CO.IN - JAVASCRIPT
+// TROUBLE SHOOTERS - JAVASCRIPT
 // ==========================================
 
 // --- Navbar Scroll Effect ---
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // --- Mobile Menu Toggle ---
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }
-});
+    // Close menu when clicking a regular nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+}
+
+// --- Services Dropdown (Mobile) ---
+const servicesDropdown = document.getElementById('servicesDropdown');
+if (servicesDropdown) {
+    const dropdownToggle = servicesDropdown.querySelector('.nav-dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Only toggle on mobile
+        if (window.innerWidth <= 768) {
+            servicesDropdown.classList.toggle('active');
+        }
+    });
+
+    // Close dropdown when clicking a service link
+    document.querySelectorAll('.nav-dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+            servicesDropdown.classList.remove('active');
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+}
 
 // --- Counter Animation ---
 const counters = document.querySelectorAll('.stat-number');
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
-            
-            const updateCounter = () => {
-                current += increment;
-                if (current < target) {
-                    counter.textContent = Math.floor(current);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target;
-                }
-            };
-            
-            updateCounter();
-            counterObserver.unobserve(counter);
-        }
-    });
-}, { threshold: 0.5 });
+if (counters.length > 0) {
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
 
-counters.forEach(counter => counterObserver.observe(counter));
+    counters.forEach(counter => counterObserver.observe(counter));
+}
 
 // --- Scroll Reveal Animation ---
 const revealElements = document.querySelectorAll(
-    '.service-card, .why-item, .process-step, .industry-item, .service-detail, .about-card, .value-item, .info-card'
+    '.service-card, .why-item, .process-step, .industry-item, .about-card, .value-item, .info-card, .feature-card, .blog-card'
 );
 
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1 });
+if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    revealObserver.observe(el);
-});
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        revealObserver.observe(el);
+    });
+}
 
 // --- Smooth Scroll for Anchor Links ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
         if (target) {
+            e.preventDefault();
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -107,23 +144,42 @@ const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         const btn = this.querySelector('button[type="submit"]');
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        btn.disabled = true;
-        
-        // Re-enable after submission (Formspree handles the actual submission)
-        setTimeout(() => {
-            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            btn.style.background = 'linear-gradient(135deg, #00D4AA, #00B894)';
-        }, 2000);
+        if (btn) {
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                btn.style.background = 'linear-gradient(135deg, #00D68F, #00BFFF)';
+            }, 2000);
+        }
     });
 }
 
-// --- Active Nav Link Highlight ---
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+// --- Active Nav Link Highlight (Auto) ---
+const currentPath = window.location.pathname;
+const currentPage = currentPath.split('/').pop() || 'index.html';
+
 document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    const linkHref = link.getAttribute('href');
+    if (linkHref === currentPage || 
+        (currentPage === '' && linkHref === 'index.html') ||
+        (currentPath.includes('/services/') && linkHref === 'services.html')) {
         link.classList.add('active');
+    } else {
+        link.classList.remove('active');
     }
 });
 
-console.log('🛡️ Troubleshooter.co.in - Website Loaded Successfully');
+// --- Highlight Services dropdown when on service page ---
+if (currentPath.includes('/services/')) {
+    const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.style.color = 'var(--primary)';
+    }
+}
+
+// --- Add scroll-padding for fixed navbar ---
+document.documentElement.style.scrollPaddingTop = '90px';
+
+console.log('🛡️ Trouble Shooters - Cyber Security & IT Services | Website Loaded');
