@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trouble Shooters Pvt Ltd - e-Discovery | Cyber Security | IT Support Services</title>
-    <meta name="description" content="Trouble Shooters Pvt Ltd provides expert e-Discovery, Data Breach Response, Cyber Incident Response, Document Review, CLM, and IT Support Services across India.">
+    <title>Trouble Shooters - e-Discovery | Cyber Security | IT Support Services</title>
+    <meta name="description" content="Trouble Shooters provides expert e-Discovery, Data Breach Response, Cyber Incident Response, Document Review, CLM, and IT Support Services across India.">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,14 +16,42 @@
         <div class="container">
             <div class="nav-brand">
                 <a href="index.html">
-                    <span class="logo-icon"><i class="fas fa-shield-halved"></i></span>
-                    <span class="logo-text">TROUBLE SHOOTERS</span>
+                    <img src="images/logo.png" alt="Trouble Shooters" class="nav-logo">
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-name">TROUBLE SHOOTERS</span>
+                        <span class="nav-brand-tagline">Cyber Security Experts</span>
+                    </div>
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <div class="nav-dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="nav-dropdown-menu">
+                        <a href="services/ediscovery.html" class="nav-dropdown-item">
+                            <i class="fas fa-magnifying-glass-chart"></i> e-Discovery
+                        </a>
+                        <a href="services/data-breach-response.html" class="nav-dropdown-item">
+                            <i class="fas fa-shield-virus"></i> Data Breach Response
+                        </a>
+                        <a href="services/incident-response.html" class="nav-dropdown-item">
+                            <i class="fas fa-user-shield"></i> Incident Response
+                        </a>
+                        <a href="services/document-review.html" class="nav-dropdown-item">
+                            <i class="fas fa-file-shield"></i> Document Review
+                        </a>
+                        <a href="services/clm.html" class="nav-dropdown-item">
+                            <i class="fas fa-file-contract"></i> CLM
+                        </a>
+                        <a href="services/it-support.html" class="nav-dropdown-item">
+                            <i class="fas fa-headset"></i> IT Support
+                        </a>
+                    </div>
+                </div>
+                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="contact.html" class="nav-btn">Get Started</a>
             </div>
@@ -37,61 +65,67 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-bolt"></i> Trusted Cyber Security & IT Solutions
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Trusted Cyber Security & IT Solutions
+                </div>
+                <h1 class="hero-title">
+                    Protecting Your <span class="gradient-text">Digital Assets</span> With Expert Solutions
+                </h1>
+                <p class="hero-subtitle">
+                    From e-Discovery to Cyber Incident Response, we provide end-to-end digital forensics, document review, contract management, and IT support services to safeguard your business.
+                </p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i> Explore Services
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Free Consultation
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span><span class="gradient-text" style="font-size: 32px; font-weight: 800;">+</span>
+                        <span class="stat-label">Cases Handled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span><span class="gradient-text" style="font-size: 32px; font-weight: 800;">+</span>
+                        <span class="stat-label">Clients Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99">0</span><span class="gradient-text" style="font-size: 32px; font-weight: 800;">%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="24">0</span><span class="gradient-text" style="font-size: 32px; font-weight: 800;">/7</span>
+                        <span class="stat-label">Support Available</span>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title">
-                Protecting Your <span class="gradient-text">Digital Assets</span> 
-                With Expert Solutions
-            </h1>
-            <p class="hero-subtitle">
-                From e-Discovery to Cyber Incident Response, we provide end-to-end 
-                digital forensics, document review, contract management, and IT support 
-                services to safeguard your business.
-            </p>
-            <div class="hero-buttons">
-                <a href="services.html" class="btn btn-primary">
-                    <i class="fas fa-arrow-right"></i> Explore Services
-                </a>
-                <a href="contact.html" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i> Free Consultation
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="500">0</span>+
-                    <span class="stat-label">Cases Handled</span>
+            
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+                <div class="hero-visual-container">
+                    <div class="shield-circle"></div>
+                    <div class="shield-circle-2"></div>
+                    <div class="shield-center">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div class="shield-icons">
+                        <div class="shield-icon"><i class="fas fa-lock"></i></div>
+                        <div class="shield-icon"><i class="fas fa-database"></i></div>
+                        <div class="shield-icon"><i class="fas fa-bug"></i></div>
+                        <div class="shield-icon"><i class="fas fa-network-wired"></i></div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="150">0</span>+
-                    <span class="stat-label">Clients Served</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="99">0</span>%
-                    <span class="stat-label">Success Rate</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="24">0</span>/7
-                    <span class="stat-label">Support Available</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="cyber-grid">
-                <div class="grid-item"><i class="fas fa-shield-halved"></i></div>
-                <div class="grid-item"><i class="fas fa-lock"></i></div>
-                <div class="grid-item"><i class="fas fa-server"></i></div>
-                <div class="grid-item"><i class="fas fa-database"></i></div>
-                <div class="grid-item"><i class="fas fa-network-wired"></i></div>
-                <div class="grid-item"><i class="fas fa-bug"></i></div>
             </div>
         </div>
     </section>
 
     <!-- SERVICES SECTION -->
-    <section class="services-section" id="services">
+    <section class="section section-dark">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-cog"></i> What We Do</span>
@@ -100,7 +134,6 @@
             </div>
             <div class="services-grid">
 
-                <!-- Service 1: e-Discovery -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-magnifying-glass-chart"></i>
@@ -112,10 +145,9 @@
                         <li><i class="fas fa-check"></i> Processing & Analytics</li>
                         <li><i class="fas fa-check"></i> Review & Production</li>
                     </ul>
-                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/ediscovery.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Service 2: Data Breach Response -->
                 <div class="service-card featured">
                     <div class="service-badge">Most Requested</div>
                     <div class="service-icon">
@@ -128,10 +160,9 @@
                         <li><i class="fas fa-check"></i> Containment & Recovery</li>
                         <li><i class="fas fa-check"></i> Compliance Reporting</li>
                     </ul>
-                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/data-breach-response.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Service 3: Cyber Incident Response -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-user-shield"></i>
@@ -143,10 +174,9 @@
                         <li><i class="fas fa-check"></i> Forensic Analysis</li>
                         <li><i class="fas fa-check"></i> Threat Elimination</li>
                     </ul>
-                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/incident-response.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Service 4: Document Review -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-file-shield"></i>
@@ -158,10 +188,9 @@
                         <li><i class="fas fa-check"></i> Privilege Review</li>
                         <li><i class="fas fa-check"></i> Quality Control</li>
                     </ul>
-                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/document-review.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Service 5: CLM -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-file-contract"></i>
@@ -173,10 +202,9 @@
                         <li><i class="fas fa-check"></i> Workflow Automation</li>
                         <li><i class="fas fa-check"></i> Compliance Tracking</li>
                     </ul>
-                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/clm.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Service 6: IT Support -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-headset"></i>
@@ -188,7 +216,7 @@
                         <li><i class="fas fa-check"></i> Cloud Solutions</li>
                         <li><i class="fas fa-check"></i> Network Security</li>
                     </ul>
-                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="services/it-support.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
             </div>
@@ -196,7 +224,7 @@
     </section>
 
     <!-- WHY CHOOSE US -->
-    <section class="why-us-section">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-star"></i> Why Choose Us</span>
@@ -238,7 +266,7 @@
     </section>
 
     <!-- PROCESS SECTION -->
-    <section class="process-section">
+    <section class="section section-dark">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-list-ol"></i> Our Process</span>
@@ -278,7 +306,7 @@
     </section>
 
     <!-- INDUSTRIES SECTION -->
-    <section class="industries-section">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-building"></i> Industries</span>
@@ -345,10 +373,13 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-brand">
-                        <span class="logo-icon"><i class="fas fa-shield-halved"></i></span>
-                        <span class="logo-text">TROUBLE SHOOTERS PVT LTD</span>
+                        <img src="images/logo.png" alt="Trouble Shooters" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">TROUBLE SHOOTERS</span>
+                            <span class="footer-brand-tagline">Cyber Security Experts</span>
+                        </div>
                     </div>
-                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services. Protecting businesses across India.</p>
+                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services. Protecting businesses across India with expert solutions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -359,22 +390,22 @@
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html">e-Discovery</a></li>
-                        <li><a href="services.html">Data Breach Response</a></li>
-                        <li><a href="services.html">Cyber Incident Response</a></li>
-                        <li><a href="services.html">Document Review</a></li>
-                        <li><a href="services.html">CLM</a></li>
-                        <li><a href="services.html">IT Support</a></li>
+                        <li><a href="services/ediscovery.html">e-Discovery</a></li>
+                        <li><a href="services/data-breach-response.html">Data Breach Response</a></li>
+                        <li><a href="services/incident-response.html">Cyber Incident Response</a></li>
+                        <li><a href="services/document-review.html">Document Review</a></li>
+                        <li><a href="services/clm.html">CLM</a></li>
+                        <li><a href="services/it-support.html">IT Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -387,10 +418,19 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2020 Trouble Shooters Pvt Ltd | All Rights Reserved</p>
+                <p>&copy; 2024 Trouble Shooters. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="js/main.js"></script>
 </body>
