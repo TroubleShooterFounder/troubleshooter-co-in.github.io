@@ -149,12 +149,15 @@ button {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 16px 0;
+    padding: 12px 0;
     background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     transition: var(--transition);
+    min-height: 75px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar.scrolled {
@@ -176,8 +179,10 @@ button {
 }
 
 .nav-logo {
-    height: 60px;
+    height: 50px;
     width: auto;
+    max-width: 180px;
+    object-fit: contain;
     filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.5));
     transition: var(--transition);
 }
@@ -1767,8 +1772,10 @@ button {
 }
 
 .footer-logo {
-    height: 65px;
+    height: 55px;
     width: auto;
+    max-width: 200px;
+    object-fit: contain;
     margin-bottom: 20px;
 }
 
