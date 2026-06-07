@@ -32,27 +32,16 @@ if (hamburger && navMenu) {
             navMenu.classList.remove('active');
         });
     });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
 }
 
-// --- Services Dropdown (Mobile) ---
+// --- Services Dropdown ---
 const servicesDropdown = document.getElementById('servicesDropdown');
 if (servicesDropdown) {
     const dropdownToggle = servicesDropdown.querySelector('.nav-dropdown-toggle');
     
     dropdownToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        // Only toggle on mobile
-        if (window.innerWidth <= 768) {
-            servicesDropdown.classList.toggle('active');
-        }
+        servicesDropdown.classList.toggle('active');
     });
 
     // Close dropdown when clicking a service link
@@ -66,6 +55,47 @@ if (servicesDropdown) {
         });
     });
 }
+
+// --- Close dropdown when clicking outside ---
+document.addEventListener('click', (e) => {
+    const allDropdowns = document.querySelectorAll('.nav-dropdown');
+    allDropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+        }
+    });
+    
+    // Also close mobile menu when clicking outside
+    if (hamburger && navMenu) {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    }
+});
+
+// --- Auto-close dropdown and mobile menu on scroll ---
+let lastScrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const scrollDiff = Math.abs(currentScrollY - lastScrollY);
+    
+    // Close dropdown if user scrolled more than 30px
+    if (scrollDiff > 30) {
+        const allDropdowns = document.querySelectorAll('.nav-dropdown');
+        allDropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+        
+        // Also close mobile menu on scroll
+        if (hamburger && navMenu && window.innerWidth <= 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    }
+    
+    lastScrollY = currentScrollY;
+});
 
 // --- Counter Animation ---
 const counters = document.querySelectorAll('.stat-number');
