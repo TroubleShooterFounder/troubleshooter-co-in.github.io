@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIPAA Compliance Guide 2025 - Trouble Shooters | Healthcare Data Protection</title>
+    <meta name="description" content="Complete HIPAA compliance guide for healthcare organizations. Learn Privacy Rule, Security Rule, Breach Notification, HITECH Act, and PHI protection best practices.">
+    <meta name="keywords" content="HIPAA compliance, PHI, healthcare data protection, HITECH Act, HIPAA privacy rule, HIPAA security rule, business associate agreement, HIPAA breach notification">
+
+    <meta property="og:title" content="HIPAA Compliance Guide for Healthcare Organizations in 2025">
+    <meta property="og:description" content="Complete playbook for HIPAA compliance covering Privacy Rule, Security Rule, Breach Notification, and HITECH updates.">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ═══════════════════════════════════════════
+           BLOG POST - SINGLE ARTICLE STYLES
+        ═══════════════════════════════════════════ */
+
+        .article-hero {
+            background: linear-gradient(135deg, #0A0A0A 0%, #111111 100%);
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .article-category-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(0, 191, 255, 0.1);
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            border-radius: 50px;
+            color: #00BFFF;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .article-hero h1 {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-hero p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .article-meta-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .meta-item i {
+            color: #00BFFF;
+        }
+
+        .meta-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-author-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0A0A;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.15), rgba(0, 229, 255, 0.05));
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(45deg, transparent 49%, rgba(0, 191, 255, 0.04) 49%, rgba(0, 191, 255, 0.04) 51%, transparent 51%),
+                linear-gradient(-45deg, transparent 49%, rgba(0, 191, 255, 0.04) 49%, rgba(0, 191, 255, 0.04) 51%, transparent 51%);
+            background-size: 30px 30px;
+        }
+
+        .article-banner i {
+            font-size: 100px;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+        }
+
+        .article-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr 240px;
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .share-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .share-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 191, 255, 0.3);
+        }
+
+        .share-btn.linkedin:hover { background: rgba(10, 102, 194, 0.15); color: #0A66C2; border-color: #0A66C2; }
+        .share-btn.twitter:hover { background: rgba(29, 161, 242, 0.15); color: #1DA1F2; border-color: #1DA1F2; }
+        .share-btn.whatsapp:hover { background: rgba(37, 211, 102, 0.15); color: #25D366; border-color: #25D366; }
+        .share-btn.facebook:hover { background: rgba(24, 119, 242, 0.15); color: #1877F2; border-color: #1877F2; }
+        .share-btn.copy:hover { background: rgba(0, 191, 255, 0.15); color: #00BFFF; border-color: #00BFFF; }
+
+        .article-content {
+            min-width: 0;
+        }
+
+        .article-content > p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 22px;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 50px 0 20px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(0, 191, 255, 0.15);
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #00BFFF;
+            margin: 35px 0 16px;
+        }
+
+        .article-content h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 25px 0 12px;
+        }
+
+        .article-content ul, .article-content ol {
+            padding-left: 24px;
+            margin-bottom: 22px;
+        }
+
+        .article-content ul li, .article-content ol li {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 10px;
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .article-content a {
+            color: #00BFFF;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0, 191, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #00BFFF;
+            color: #00E5FF;
+        }
+
+        .highlight-box {
+            background: rgba(0, 191, 255, 0.06);
+            border-left: 4px solid #00BFFF;
+            border-radius: 0 12px 12px 0;
+            padding: 20px 24px;
+            margin: 30px 0;
+        }
+
+        .highlight-box.warning {
+            background: rgba(255, 71, 87, 0.06);
+            border-left-color: #FF4757;
+        }
+
+        .highlight-box.success {
+            background: rgba(0, 214, 143, 0.06);
+            border-left-color: #00D68F;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .highlight-box .box-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-box .box-title i { color: #00BFFF; }
+        .highlight-box.warning .box-title i { color: #FF4757; }
+        .highlight-box.success .box-title i { color: #00D68F; }
+
+        .article-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .stat-box-number {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .stat-box-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .article-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .article-table th {
+            background: rgba(0, 191, 255, 0.1);
+            color: #00BFFF;
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .article-table td {
+            padding: 14px 18px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .toc-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .toc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 20px;
+        }
+
+        .toc-card-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #00BFFF;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .toc-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-card ul li {
+            margin-bottom: 4px;
+        }
+
+        .toc-card ul li a {
+            display: block;
+            padding: 8px 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            border-left: 2px solid transparent;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .toc-card ul li a:hover,
+        .toc-card ul li a.active {
+            color: #00BFFF;
+            background: rgba(0, 191, 255, 0.06);
+            border-left-color: #00BFFF;
+            padding-left: 16px;
+        }
+
+        .article-cta {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.12), rgba(0, 229, 255, 0.04));
+            border: 1px solid rgba(0, 191, 255, 0.25);
+            border-radius: 20px;
+            padding: 40px 35px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .article-cta h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .article-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .author-card {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin: 50px 0;
+            align-items: center;
+        }
+
+        .author-card-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0A0A;
+            font-weight: 800;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .author-card-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .author-card-info p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .related-posts {
+            margin-top: 60px;
+            padding-top: 50px;
+            border-top: 1px solid var(--border);
+        }
+
+        .related-posts h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .related-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .related-card:hover {
+            border-color: rgba(0, 191, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 191, 255, 0.08);
+        }
+
+        .related-card-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 191, 255, 0.1);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00BFFF;
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        .related-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .related-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .article-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .article-breadcrumb a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        .article-breadcrumb a:hover {
+            color: #00E5FF;
+        }
+
+        @media (max-width: 1100px) {
+            .article-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .share-sidebar, .toc-sidebar {
+                position: static;
+            }
+
+            .share-sidebar {
+                order: 3;
+                margin-top: 40px;
+            }
+
+            .toc-sidebar {
+                order: -1;
+                margin-bottom: 30px;
+            }
+
+            .share-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .share-btn {
+                flex: 1;
+                min-width: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-hero h1 {
+                font-size: 28px;
+            }
+
+            .article-hero p {
+                font-size: 15px;
+            }
+
+            .article-meta-bar {
+                gap: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 22px;
+            }
+
+            .article-content h3 {
+                font-size: 18px;
+            }
+
+            .article-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .author-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .article-banner {
+                height: 200px;
+            }
+
+            .article-banner i {
+                font-size: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Trouble Shooters" class="nav-logo">
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-name">TROUBLE SHOOTERS</span>
+                        <span class="nav-brand-tagline">Cyber Security Experts</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <div class="nav-dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="nav-dropdown-menu">
+                        <a href="../services/ediscovery.html" class="nav-dropdown-item"><i class="fas fa-magnifying-glass-chart"></i> e-Discovery</a>
+                        <a href="../services/data-breach-response.html" class="nav-dropdown-item"><i class="fas fa-shield-virus"></i> Data Breach Response</a>
+                        <a href="../services/incident-response.html" class="nav-dropdown-item"><i class="fas fa-user-shield"></i> Incident Response</a>
+                        <a href="../services/document-review.html" class="nav-dropdown-item"><i class="fas fa-file-shield"></i> Document Review</a>
+                        <a href="../services/clm.html" class="nav-dropdown-item"><i class="fas fa-file-contract"></i> CLM</a>
+                        <a href="../services/it-support.html" class="nav-dropdown-item"><i class="fas fa-headset"></i> IT Support</a>
+                    </div>
+                </div>
+                <a href="../blog.html" class="nav-link active">Blog</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+                <a href="../contact.html" class="nav-btn">Get Started</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <a href="../blog.html">Blog</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <span>HIPAA Compliance Guide</span>
+            </div>
+            <div class="article-hero-content">
+                <span class="article-category-tag">
+                    <i class="fas fa-hospital"></i> HIPAA Compliance
+                </span>
+                <h1>HIPAA Compliance Guide for Healthcare Organizations in 2025</h1>
+                <p>The complete playbook for HIPAA compliance — covering Privacy Rule, Security Rule, Breach Notification Rule, and HITECH Act updates. Essential reading for healthcare providers, business associates, and IT teams handling Protected Health Information.</p>
+
+                <div class="article-meta-bar">
+                    <div class="meta-item meta-author">
+                        <div class="meta-author-avatar">TS</div>
+                        <span>Trouble Shooters Team</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i> December 18, 2024
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i> 10 min read
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-eye"></i> 2.4k views
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <div class="article-layout">
+
+        <!-- LEFT: Share -->
+        <aside class="share-sidebar">
+            <div class="share-title">Share Article</div>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://troubleshooter.co.in/blog/hipaa-compliance-guide.html" target="_blank" class="share-btn linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://troubleshooter.co.in/blog/hipaa-compliance-guide.html&text=HIPAA Compliance Guide 2025" target="_blank" class="share-btn twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://wa.me/?text=Check this HIPAA guide: https://troubleshooter.co.in/blog/hipaa-compliance-guide.html" target="_blank" class="share-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://troubleshooter.co.in/blog/hipaa-compliance-guide.html" target="_blank" class="share-btn facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <button onclick="copyLink()" class="share-btn copy" id="copyBtn">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+            </div>
+        </aside>
+
+        <!-- CENTER: Content -->
+        <main class="article-content">
+
+            <div class="article-banner">
+                <i class="fas fa-hospital"></i>
+            </div>
+
+            <p>The <strong>Health Insurance Portability and Accountability Act (HIPAA)</strong> is the cornerstone of healthcare data protection in the United States. Enacted in 1996 and significantly strengthened by the HITECH Act of 2009, HIPAA establishes national standards for protecting sensitive patient health information.</p>
+
+            <p>Whether you're a healthcare provider, health plan, healthcare clearinghouse, or a business associate handling <strong>Protected Health Information (PHI)</strong>, HIPAA compliance is not optional — it's a federal mandate with penalties reaching <strong>$1.9 million per violation category per year</strong>.</p>
+
+            <div class="highlight-box">
+                <div class="box-title"><i class="fas fa-circle-info"></i> Quick Summary</div>
+                <p>HIPAA protects Protected Health Information (PHI) through three core rules: <strong>Privacy Rule</strong>, <strong>Security Rule</strong>, and <strong>Breach Notification Rule</strong>. Non-compliance can lead to civil penalties up to <strong>$1.9 million annually</strong> and criminal penalties up to <strong>$250,000 + 10 years imprisonment</strong>.</p>
+            </div>
+
+            <h2 id="what-is-hipaa">What is HIPAA?</h2>
+            <p>HIPAA is a US federal law designed to protect patient health information while enabling the flow of health data needed to provide high-quality healthcare. It applies to two main categories of organizations:</p>
+
+            <h3>Covered Entities</h3>
+            <ul>
+                <li><strong>Healthcare Providers:</strong> Hospitals, clinics, physicians, dentists, pharmacies that transmit health information electronically</li>
+                <li><strong>Health Plans:</strong> Health insurance companies, HMOs, employer-sponsored plans, Medicare, Medicaid</li>
+                <li><strong>Healthcare Clearinghouses:</strong> Organizations that process health information between providers and payers</li>
+            </ul>
+
+            <h3>Business Associates</h3>
+            <p>Any third-party vendor that handles PHI on behalf of a covered entity, including:</p>
+            <ul>
+                <li>Cloud storage providers</li>
+                <li>Billing and coding companies</li>
+                <li>IT support and managed service providers</li>
+                <li>Law firms handling healthcare litigation</li>
+                <li>e-Discovery and forensics vendors</li>
+            </ul>
+
+            <h2 id="hipaa-stats">HIPAA by the Numbers</h2>
+            <div class="article-stats">
+                <div class="stat-box">
+                    <span class="stat-box-number">$1.9M</span>
+                    <span class="stat-box-label">Max Penalty Per Category/Year</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">60 Days</span>
+                    <span class="stat-box-label">Breach Notification Deadline</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">500+</span>
+                    <span class="stat-box-label">Individuals = HHS Notification</span>
+                </div>
+            </div>
+
+            <h2 id="what-is-phi">Understanding Protected Health Information (PHI)</h2>
+            <p>PHI is any individually identifiable health information that is created, received, maintained, or transmitted by a covered entity or business associate. It includes:</p>
+
+            <h3>18 HIPAA Identifiers</h3>
+            <ol>
+                <li>Names</li>
+                <li>Geographic data (smaller than state)</li>
+                <li>All elements of dates (except year)</li>
+                <li>Telephone numbers</li>
+                <li>Fax numbers</li>
+                <li>Email addresses</li>
+                <li>Social Security numbers</li>
+                <li>Medical record numbers</li>
+                <li>Health plan beneficiary numbers</li>
+                <li>Account numbers</li>
+                <li>Certificate / license numbers</li>
+                <li>Vehicle identifiers (VIN, license plates)</li>
+                <li>Device identifiers and serial numbers</li>
+                <li>Web URLs</li>
+                <li>IP addresses</li>
+                <li>Biometric identifiers (fingerprints, voiceprints)</li>
+                <li>Full-face photographs</li>
+                <li>Any other unique identifying characteristic</li>
+            </ol>
+
+            <div class="highlight-box success">
+                <div class="box-title"><i class="fas fa-circle-check"></i> ePHI Defined</div>
+                <p>When PHI is created, stored, or transmitted electronically, it becomes <strong>ePHI (electronic PHI)</strong> — which is specifically governed by the HIPAA Security Rule.</p>
+            </div>
+
+            <h2 id="three-rules">The Three Core HIPAA Rules</h2>
+
+            <h3>1. The Privacy Rule</h3>
+            <p>The HIPAA Privacy Rule establishes national standards for protecting individuals' medical records and other personal health information.</p>
+
+            <h4>Key Privacy Rule Requirements:</h4>
+            <ul>
+                <li><strong>Patient Rights:</strong> Patients have the right to access, amend, and receive accounting of disclosures of their PHI</li>
+                <li><strong>Minimum Necessary Standard:</strong> Use only the minimum PHI necessary for the intended purpose</li>
+                <li><strong>Notice of Privacy Practices (NPP):</strong> Must be provided to all patients</li>
+                <li><strong>Authorization Requirements:</strong> Written authorization required for non-TPO (Treatment, Payment, Operations) uses</li>
+                <li><strong>Privacy Officer:</strong> Designate a HIPAA Privacy Officer responsible for compliance</li>
+            </ul>
+
+            <h3>2. The Security Rule</h3>
+            <p>The HIPAA Security Rule sets standards for protecting ePHI through three categories of safeguards:</p>
+
+            <h4>Administrative Safeguards</h4>
+            <ul>
+                <li>Security management process and risk analysis</li>
+                <li>Workforce security training and access management</li>
+                <li>Security incident procedures</li>
+                <li>Contingency planning (backup, disaster recovery)</li>
+                <li>Periodic security evaluations</li>
+            </ul>
+
+            <h4>Physical Safeguards</h4>
+            <ul>
+                <li>Facility access controls</li>
+                <li>Workstation use and security</li>
+                <li>Device and media controls (disposal, re-use, accountability)</li>
+            </ul>
+
+            <h4>Technical Safeguards</h4>
+            <ul>
+                <li>Access controls (unique user IDs, automatic logoff, encryption)</li>
+                <li>Audit controls (logging and monitoring)</li>
+                <li>Integrity controls (preventing unauthorized alteration)</li>
+                <li>Transmission security (encryption during data transmission)</li>
+            </ul>
+
+            <h3>3. The Breach Notification Rule</h3>
+            <p>Following a breach of unsecured PHI, covered entities must notify:</p>
+            <ul>
+                <li><strong>Affected Individuals:</strong> Within 60 days of discovery</li>
+                <li><strong>HHS Office for Civil Rights (OCR):</strong> Within 60 days (or annually for breaches affecting &lt;500 individuals)</li>
+                <li><strong>Media:</strong> If breach affects 500+ individuals in a state or jurisdiction</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <div class="box-title"><i class="fas fa-triangle-exclamation"></i> Critical Timeline</div>
+                <p>The 60-day clock starts the moment a breach is <strong>discovered</strong>, not when it occurred. Have an <a href="../services/incident-response.html">incident response plan</a> ready before you need it.</p>
+            </div>
+
+            <h2 id="hitech-act">The HITECH Act: Strengthening HIPAA</h2>
+            <p>The <strong>Health Information Technology for Economic and Clinical Health (HITECH) Act</strong> of 2009 dramatically strengthened HIPAA by:</p>
+            <ul>
+                <li>Making business associates <strong>directly liable</strong> for HIPAA compliance</li>
+                <li>Introducing the <strong>Breach Notification Rule</strong></li>
+                <li>Significantly <strong>increasing penalties</strong> (up to $1.9M/category/year)</li>
+                <li>Expanding patient rights to electronic access of their PHI</li>
+                <li>Promoting adoption of Electronic Health Records (EHRs)</li>
+                <li>Mandating <strong>encryption</strong> as a safe harbor for breach notification</li>
+            </ul>
+
+            <h2 id="penalties">HIPAA Penalty Structure</h2>
+            <div style="overflow-x: auto;">
+                <table class="article-table">
+                    <thead>
+                        <tr>
+                            <th>Violation Tier</th>
+                            <th>Per Violation</th>
+                            <th>Annual Max</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tier 1: Lack of knowledge</td>
+                            <td>$137 - $34,464</td>
+                            <td>$34,464</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 2: Reasonable cause</td>
+                            <td>$1,379 - $137,886</td>
+                            <td>$137,886</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 3: Willful neglect (corrected)</td>
+                            <td>$13,785 - $344,638</td>
+                            <td>$344,638</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 4: Willful neglect (not corrected)</td>
+                            <td>$68,928 - $2,067,813</td>
+                            <td>$2,067,813</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="font-size: 13px; color: var(--text-muted); font-style: italic;">*2024 adjusted penalty amounts. Criminal penalties can add up to $250,000 and 10 years imprisonment for malicious violations.</p>
+
+            <h2 id="business-associates">Business Associate Agreements (BAAs)</h2>
+            <p>Any vendor handling PHI must sign a <strong>Business Associate Agreement</strong> before access is granted. A compliant BAA must include:</p>
+            <ul>
+                <li>Permitted uses and disclosures of PHI</li>
+                <li>Requirement to implement appropriate safeguards</li>
+                <li>Obligation to report breaches and security incidents</li>
+                <li>Requirement to ensure subcontractors agree to similar terms</li>
+                <li>Return or destruction of PHI upon contract termination</li>
+            </ul>
+
+            <h2 id="compliance-roadmap">7-Step HIPAA Compliance Roadmap</h2>
+
+            <h3>Step 1: Conduct a Risk Analysis</h3>
+            <p>Identify all locations where PHI is created, received, maintained, or transmitted. Assess vulnerabilities and document findings — this is the foundation of HIPAA compliance.</p>
+
+            <h3>Step 2: Develop Policies and Procedures</h3>
+            <p>Create written policies covering all aspects of HIPAA — privacy, security, breach response, sanctions, and workforce training.</p>
+
+            <h3>Step 3: Implement Administrative Safeguards</h3>
+            <p>Appoint Privacy and Security Officers, establish workforce security procedures, and implement access management controls.</p>
+
+            <h3>Step 4: Deploy Technical Safeguards</h3>
+            <p>Implement encryption (at-rest and in-transit), access controls, audit logging, and integrity verification mechanisms.</p>
+
+            <h3>Step 5: Train Your Workforce</h3>
+            <p>Provide initial and ongoing HIPAA training. Document attendance and assessment results — workforce errors are the #1 cause of breaches.</p>
+
+            <h3>Step 6: Execute Business Associate Agreements</h3>
+            <p>Review all vendor relationships. Ensure BAAs are in place with any party that may access PHI, including cloud providers, IT support, and e-Discovery vendors.</p>
+
+            <h3>Step 7: Establish Breach Response Procedures</h3>
+            <p>Document incident response workflows, notification templates, and forensic investigation procedures. Test the plan annually.</p>
+
+            <div class="highlight-box success">
+                <div class="box-title"><i class="fas fa-circle-check"></i> Pro Tip</div>
+                <p>Conduct an <strong>annual HIPAA risk assessment</strong> — it's required and demonstrates good-faith compliance efforts. Many enforcement actions are reduced or dismissed when entities can show documented risk analysis.</p>
+            </div>
+
+            <h2 id="common-violations">Top 5 Common HIPAA Violations</h2>
+            <ol>
+                <li><strong>Unencrypted Devices:</strong> Lost or stolen laptops, phones, and USB drives containing PHI</li>
+                <li><strong>Improper Access:</strong> Employees accessing patient records without authorization (snooping)</li>
+                <li><strong>Lack of Risk Analysis:</strong> Failing to conduct or document required risk assessments</li>
+                <li><strong>Missing BAAs:</strong> Sharing PHI with vendors without proper agreements</li>
+                <li><strong>Improper Disposal:</strong> Throwing away PHI in regular trash instead of secure shredding</li>
+            </ol>
+
+            <!-- CTA -->
+            <div class="article-cta">
+                <h3>Need HIPAA Compliance Help?</h3>
+                <p>Our healthcare compliance experts can conduct your HIPAA risk assessment, develop policies, implement technical safeguards, and prepare your organization for OCR audits.</p>
+                <a href="../contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-hospital"></i> Get HIPAA Compliance Audit
+                </a>
+            </div>
+
+            <h2 id="ocr-audits">OCR Audits: What to Expect</h2>
+            <p>The HHS Office for Civil Rights conducts both proactive audits and complaint-driven investigations. During an audit, OCR typically requests:</p>
+            <ul>
+                <li>Documentation of risk analyses (past 6 years)</li>
+                <li>Policies and procedures</li>
+                <li>Workforce training records</li>
+                <li>Business Associate Agreements</li>
+                <li>Breach notification documentation</li>
+                <li>Notice of Privacy Practices</li>
+                <li>Incident response logs</li>
+            </ul>
+
+            <h2 id="hipaa-future">The Future of HIPAA</h2>
+            <p>HIPAA continues to evolve with emerging technologies. Key trends to watch:</p>
+            <ul>
+                <li><strong>AI in Healthcare:</strong> New guidance on AI/ML systems processing PHI</li>
+                <li><strong>Cybersecurity Performance Goals:</strong> HHS pushing voluntary cyber baselines</li>
+                <li><strong>State Laws:</strong> Increasing state-level privacy laws creating overlapping requirements</li>
+                <li><strong>Information Blocking Rules:</strong> 21st Century Cures Act intersecting with HIPAA</li>
+                <li><strong>Increased Enforcement:</strong> OCR has dramatically increased audit activity post-2023</li>
+            </ul>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>HIPAA compliance is a continuous journey, not a one-time project. With cyber threats targeting healthcare more aggressively than ever — and OCR enforcement at record highs — the cost of non-compliance far exceeds the investment in proper compliance.</p>
+
+            <p>The healthcare organizations that thrive will be those that view HIPAA not as a burden, but as a framework for building patient trust and operational excellence. <strong>Start with a thorough risk assessment</strong>, build a culture of security awareness, and partner with experienced compliance professionals to navigate the complexities.</p>
+
+            <p>Remember: <strong>Patients trust you with their most sensitive information</strong>. HIPAA is how you honor that trust.</p>
+
+            <!-- Author Card -->
+            <div class="author-card">
+                <div class="author-card-avatar">TS</div>
+                <div class="author-card-info">
+                    <h4>Trouble Shooters Team</h4>
+                    <p>Our cyber security and compliance experts help healthcare organizations, business associates, and IT teams achieve and maintain HIPAA compliance through risk assessments, policy development, technical safeguards, and incident response planning.</p>
+                </div>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-grid">
+                    <a href="hitech-act-healthcare.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-heart-pulse"></i></div>
+                        <h4>HITECH Act: Strengthening HIPAA in the Digital Age</h4>
+                        <p>HIPAA / HITECH · 6 min read</p>
+                    </a>
+                    <a href="pii-vs-phi-guide.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-database"></i></div>
+                        <h4>PII vs PHI: Complete Data Classification Guide</h4>
+                        <p>Data Classification · 7 min read</p>
+                    </a>
+                    <a href="ransomware-first-24-hours.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-user-shield"></i></div>
+                        <h4>Ransomware Attack? First 24 Hours Playbook</h4>
+                        <p>Incident Response · 9 min read</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- RIGHT: TOC -->
+        <aside class="toc-sidebar">
+            <div class="toc-card">
+                <div class="toc-card-title">
+                    <i class="fas fa-list"></i> In This Article
+                </div>
+                <ul>
+                    <li><a href="#what-is-hipaa" class="toc-link">What is HIPAA?</a></li>
+                    <li><a href="#hipaa-stats" class="toc-link">HIPAA by Numbers</a></li>
+                    <li><a href="#what-is-phi" class="toc-link">Understanding PHI</a></li>
+                    <li><a href="#three-rules" class="toc-link">The Three Core Rules</a></li>
+                    <li><a href="#hitech-act" class="toc-link">HITECH Act</a></li>
+                    <li><a href="#penalties" class="toc-link">Penalty Structure</a></li>
+                    <li><a href="#business-associates" class="toc-link">Business Associates</a></li>
+                    <li><a href="#compliance-roadmap" class="toc-link">7-Step Roadmap</a></li>
+                    <li><a href="#common-violations" class="toc-link">Common Violations</a></li>
+                    <li><a href="#ocr-audits" class="toc-link">OCR Audits</a></li>
+                    <li><a href="#hipaa-future" class="toc-link">Future of HIPAA</a></li>
+                    <li><a href="#conclusion" class="toc-link">Conclusion</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="../images/logo.png" alt="Trouble Shooters" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">TROUBLE SHOOTERS</span>
+                            <span class="footer-brand-tagline">Cyber Security Experts</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/ediscovery.html">e-Discovery</a></li>
+                        <li><a href="../services/data-breach-response.html">Data Breach Response</a></li>
+                        <li><a href="../services/incident-response.html">Cyber Incident Response</a></li>
+                        <li><a href="../services/document-review.html">Document Review</a></li>
+                        <li><a href="../services/clm.html">CLM</a></li>
+                        <li><a href="../services/it-support.html">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@troubleshooter.co.in</p>
+                        <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                        <p><i class="fas fa-location-dot"></i> India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trouble Shooters. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        function copyLink() {
+            const btn = document.getElementById('copyBtn');
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = 'rgba(0, 214, 143, 0.15)';
+                btn.style.color = '#00D68F';
+                btn.style.borderColor = '#00D68F';
+
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const headings = document.querySelectorAll('.article-content h2[id]');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        headings.forEach(h => observer.observe(h));
+
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
