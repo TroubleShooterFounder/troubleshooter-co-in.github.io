@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Trouble Shooters | Cyber Security & IT Insights</title>
-    <meta name="description" content="Read latest insights on Cyber Security, Digital Forensics, Data Protection, IT Support, and more from Trouble Shooters experts.">
+    <title>Blog - Trouble Shooters | Cyber Security, Compliance & Data Protection Insights</title>
+    <meta name="description" content="Expert insights on HIPAA, GDPR, CCPA, FERPA, PIPEDA, e-Discovery, and cyber security. Latest articles on US and international data protection laws.">
+    <meta name="keywords" content="HIPAA compliance, GDPR, CCPA, FERPA, PIPEDA, PII, PHI, e-Discovery, cyber security blog, data protection USA">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -482,7 +483,7 @@
     <section class="page-header">
         <div class="container">
             <h1>Our <span class="gradient-text">Blog</span></h1>
-            <p>Expert insights on cyber security, digital forensics, and IT trends</p>
+            <p>Expert insights on HIPAA, GDPR, CCPA, e-Discovery, and global compliance</p>
             <div class="breadcrumb">
                 <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Blog</span>
             </div>
@@ -504,51 +505,54 @@
                 <button class="blog-filter-btn active" data-filter="all">
                     <i class="fas fa-th-large"></i> All Posts
                 </button>
-                <button class="blog-filter-btn" data-filter="cyber-security">
-                    <i class="fas fa-shield-halved"></i> Cyber Security
+                <button class="blog-filter-btn" data-filter="hipaa">
+                    <i class="fas fa-hospital"></i> HIPAA
+                </button>
+                <button class="blog-filter-btn" data-filter="gdpr">
+                    <i class="fas fa-globe"></i> GDPR
+                </button>
+                <button class="blog-filter-btn" data-filter="ccpa">
+                    <i class="fas fa-flag-usa"></i> CCPA / CPRA
+                </button>
+                <button class="blog-filter-btn" data-filter="ferpa">
+                    <i class="fas fa-graduation-cap"></i> FERPA
+                </button>
+                <button class="blog-filter-btn" data-filter="pipeda">
+                    <i class="fas fa-maple-leaf"></i> PIPEDA
                 </button>
                 <button class="blog-filter-btn" data-filter="ediscovery">
                     <i class="fas fa-magnifying-glass-chart"></i> e-Discovery
                 </button>
-                <button class="blog-filter-btn" data-filter="data-protection">
-                    <i class="fas fa-database"></i> Data Protection
-                </button>
                 <button class="blog-filter-btn" data-filter="incident-response">
                     <i class="fas fa-user-shield"></i> Incident Response
                 </button>
-                <button class="blog-filter-btn" data-filter="document-review">
-                    <i class="fas fa-file-shield"></i> Document Review
+                <button class="blog-filter-btn" data-filter="data-classification">
+                    <i class="fas fa-database"></i> PII / PHI
                 </button>
-                <button class="blog-filter-btn" data-filter="it-support">
-                    <i class="fas fa-headset"></i> IT Support
-                </button>
-                <button class="blog-filter-btn" data-filter="digital-forensics">
-                    <i class="fas fa-fingerprint"></i> Digital Forensics
-                </button>
-                <button class="blog-filter-btn" data-filter="clm">
-                    <i class="fas fa-file-contract"></i> CLM
+                <button class="blog-filter-btn" data-filter="dpdp">
+                    <i class="fas fa-shield-halved"></i> DPDP (India)
                 </button>
             </div>
 
-            <!-- FEATURED POST -->
-            <a href="blog/dpdp-act-2023.html" style="text-decoration: none; color: inherit;">
+            <!-- FEATURED POST: HIPAA -->
+            <a href="blog/hipaa-compliance-guide.html" style="text-decoration: none; color: inherit;">
                 <article class="featured-post">
                     <div class="featured-image">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-hospital"></i>
                     </div>
                     <div class="featured-content">
                         <div class="featured-meta">
-                            <span><i class="fas fa-calendar"></i> December 5, 2024</span>
-                            <span><i class="fas fa-folder"></i> Data Protection</span>
-                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                            <span><i class="fas fa-calendar"></i> December 18, 2024</span>
+                            <span><i class="fas fa-folder"></i> HIPAA Compliance</span>
+                            <span><i class="fas fa-clock"></i> 10 min read</span>
                         </div>
-                        <h2>DPDP Act 2023: Complete Guide for Indian Businesses</h2>
-                        <p>India's Digital Personal Data Protection Act, 2023 is now a reality. This comprehensive guide breaks down everything Indian businesses need to know about compliance, penalties, data principal rights, and practical implementation steps.</p>
+                        <h2>HIPAA Compliance Guide for Healthcare Organizations in 2025</h2>
+                        <p>The complete playbook for HIPAA compliance — covering Privacy Rule, Security Rule, Breach Notification Rule, and HITECH Act updates. Essential reading for healthcare providers, business associates, and IT teams handling Protected Health Information (PHI).</p>
                         <div class="featured-author">
                             <div class="author-avatar">TS</div>
                             <div class="author-info">
                                 <div class="author-name">Trouble Shooters Team</div>
-                                <div class="author-role">Cyber Security & Compliance Experts</div>
+                                <div class="author-role">Healthcare Compliance & Cyber Security Experts</div>
                             </div>
                         </div>
                     </div>
@@ -558,68 +562,47 @@
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-newspaper"></i> Latest Articles</span>
                 <h2 class="section-title">All <span class="gradient-text">Insights</span></h2>
-                <p class="section-subtitle">Expert articles, industry news, and security tips from our team</p>
+                <p class="section-subtitle">Expert articles on US and international compliance, data protection, and cyber security</p>
             </div>
 
             <div class="blog-grid" id="blogGrid">
 
-                <!-- Blog Post 1 -->
-                <a href="blog/cyber-threats-2025.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="cyber-security" data-title="top 10 cyber threats indian businesses 2025">
+                <!-- Post 1: HIPAA (Featured duplicate in grid too) -->
+                <a href="blog/hipaa-compliance-guide.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="hipaa" data-title="hipaa compliance healthcare phi protected health information privacy security rule">
+                        <div class="blog-card-badge">Featured</div>
+                        <div class="blog-image">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Dec 18, 2024</span>
+                                <span><i class="fas fa-folder"></i> HIPAA</span>
+                            </div>
+                            <h3>HIPAA Compliance Guide for Healthcare Organizations in 2025</h3>
+                            <p>Complete playbook covering Privacy Rule, Security Rule, Breach Notification, and HITECH updates for healthcare entities.</p>
+                            <div class="blog-reading-time">
+                                <i class="fas fa-clock"></i> 10 min read
+                            </div>
+                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Post 2: GDPR vs CCPA -->
+                <a href="blog/gdpr-vs-ccpa.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="gdpr" data-title="gdpr ccpa comparison european california privacy law differences us businesses">
                         <div class="blog-card-badge">Trending</div>
                         <div class="blog-image">
-                            <i class="fas fa-shield-virus"></i>
+                            <i class="fas fa-globe"></i>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
                                 <span><i class="fas fa-calendar"></i> Dec 15, 2024</span>
-                                <span><i class="fas fa-folder"></i> Cyber Security</span>
+                                <span><i class="fas fa-folder"></i> GDPR</span>
                             </div>
-                            <h3>Top 10 Cyber Threats Indian Businesses Face in 2025</h3>
-                            <p>Discover the most dangerous cyber threats targeting Indian businesses this year and how to protect your organization from them.</p>
-                            <div class="blog-reading-time">
-                                <i class="fas fa-clock"></i> 7 min read
-                            </div>
-                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </article>
-                </a>
-
-                <!-- Blog Post 2 -->
-                <a href="blog/edrm-process-guide.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="ediscovery" data-title="edrm process legal teams electronic discovery">
-                        <div class="blog-image">
-                            <i class="fas fa-magnifying-glass-chart"></i>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Dec 10, 2024</span>
-                                <span><i class="fas fa-folder"></i> e-Discovery</span>
-                            </div>
-                            <h3>Understanding the EDRM Process for Legal Teams</h3>
-                            <p>A complete guide to the Electronic Discovery Reference Model and how it streamlines litigation support workflows.</p>
-                            <div class="blog-reading-time">
-                                <i class="fas fa-clock"></i> 6 min read
-                            </div>
-                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </article>
-                </a>
-
-                <!-- Blog Post 3 -->
-                <a href="blog/dpdp-act-2023.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="data-protection" data-title="dpdp act 2023 indian businesses data protection compliance">
-                        <div class="blog-card-badge">Featured</div>
-                        <div class="blog-image">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Dec 5, 2024</span>
-                                <span><i class="fas fa-folder"></i> Data Protection</span>
-                            </div>
-                            <h3>DPDP Act 2023 - What Indian Businesses Need to Know</h3>
-                            <p>A comprehensive overview of the Digital Personal Data Protection Act and compliance requirements for businesses.</p>
+                            <h3>GDPR vs CCPA: Key Differences Every US Business Must Know</h3>
+                            <p>Side-by-side comparison of European GDPR and California's CCPA — penalties, scope, consumer rights, and compliance requirements.</p>
                             <div class="blog-reading-time">
                                 <i class="fas fa-clock"></i> 8 min read
                             </div>
@@ -628,83 +611,19 @@
                     </article>
                 </a>
 
-                <!-- Blog Post 4 -->
-                <a href="blog/ransomware-first-24-hours.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="incident-response" data-title="ransomware attack first 24 hours response">
-                        <div class="blog-card-badge">Critical</div>
+                <!-- Post 3: PII vs PHI -->
+                <a href="blog/pii-vs-phi-guide.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="data-classification" data-title="pii phi personally identifiable information protected health information data classification">
                         <div class="blog-image">
-                            <i class="fas fa-user-shield"></i>
+                            <i class="fas fa-database"></i>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Nov 28, 2024</span>
-                                <span><i class="fas fa-folder"></i> Incident Response</span>
+                                <span><i class="fas fa-calendar"></i> Dec 12, 2024</span>
+                                <span><i class="fas fa-folder"></i> Data Classification</span>
                             </div>
-                            <h3>Ransomware Attack? Here's What to Do in First 24 Hours</h3>
-                            <p>Step-by-step guide to handling a ransomware attack effectively in the critical first 24 hours.</p>
-                            <div class="blog-reading-time">
-                                <i class="fas fa-clock"></i> 9 min read
-                            </div>
-                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </article>
-                </a>
-
-                <!-- Blog Post 5 -->
-                <a href="blog/ai-document-review.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="document-review" data-title="ai artificial intelligence legal document review">
-                        <div class="blog-image">
-                            <i class="fas fa-file-shield"></i>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Nov 20, 2024</span>
-                                <span><i class="fas fa-folder"></i> Document Review</span>
-                            </div>
-                            <h3>How AI is Revolutionizing Legal Document Review</h3>
-                            <p>Explore how artificial intelligence and machine learning are transforming document review for legal teams.</p>
-                            <div class="blog-reading-time">
-                                <i class="fas fa-clock"></i> 6 min read
-                            </div>
-                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </article>
-                </a>
-
-                <!-- Blog Post 6 -->
-                <a href="blog/cloud-security-sme.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="it-support" data-title="cloud security best practices indian sme small medium enterprise">
-                        <div class="blog-image">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Nov 15, 2024</span>
-                                <span><i class="fas fa-folder"></i> IT Support</span>
-                            </div>
-                            <h3>Cloud Security Best Practices for Indian SMEs</h3>
-                            <p>Essential cloud security tips and practices every small and medium enterprise should implement immediately.</p>
-                            <div class="blog-reading-time">
-                                <i class="fas fa-clock"></i> 5 min read
-                            </div>
-                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </article>
-                </a>
-
-                <!-- Blog Post 7 -->
-                <a href="blog/chain-of-custody.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="digital-forensics" data-title="digital forensics chain of custody evidence indian courts">
-                        <div class="blog-image">
-                            <i class="fas fa-fingerprint"></i>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Nov 10, 2024</span>
-                                <span><i class="fas fa-folder"></i> Digital Forensics</span>
-                            </div>
-                            <h3>Digital Forensics: Chain of Custody Best Practices</h3>
-                            <p>Learn the critical chain of custody procedures that make digital evidence admissible in Indian courts.</p>
+                            <h3>PII vs PHI: Complete Data Classification Guide for Compliance</h3>
+                            <p>Master the difference between Personally Identifiable Information and Protected Health Information — examples, regulations, and best practices.</p>
                             <div class="blog-reading-time">
                                 <i class="fas fa-clock"></i> 7 min read
                             </div>
@@ -713,42 +632,149 @@
                     </article>
                 </a>
 
-                <!-- Blog Post 8 -->
-                <a href="blog/clm-software-signs.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="clm" data-title="contract management software business signs clm">
+                <!-- Post 4: FERPA -->
+                <a href="blog/ferpa-compliance-edtech.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="ferpa" data-title="ferpa compliance student data education edtech privacy schools universities">
                         <div class="blog-image">
-                            <i class="fas fa-file-contract"></i>
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Nov 5, 2024</span>
-                                <span><i class="fas fa-folder"></i> CLM</span>
+                                <span><i class="fas fa-calendar"></i> Dec 8, 2024</span>
+                                <span><i class="fas fa-folder"></i> FERPA</span>
                             </div>
-                            <h3>5 Signs Your Business Needs Contract Management Software</h3>
-                            <p>Identify the warning signs that indicate it's time to invest in proper Contract Lifecycle Management.</p>
+                            <h3>FERPA Compliance: Protecting Student Data in EdTech</h3>
+                            <p>How educational institutions and EdTech companies must handle student records under the Family Educational Rights and Privacy Act.</p>
                             <div class="blog-reading-time">
-                                <i class="fas fa-clock"></i> 5 min read
+                                <i class="fas fa-clock"></i> 7 min read
                             </div>
                             <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </article>
                 </a>
 
-                <!-- Blog Post 9 -->
-                <a href="blog/password-security.html" style="text-decoration: none; color: inherit;">
-                    <article class="blog-card" data-category="cyber-security" data-title="password security employees social engineering human risk">
+                <!-- Post 5: PIPEDA -->
+                <a href="blog/pipeda-canada-privacy.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="pipeda" data-title="pipeda canada privacy law cross border data canadian compliance">
                         <div class="blog-image">
-                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-maple-leaf"></i>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> Oct 30, 2024</span>
-                                <span><i class="fas fa-folder"></i> Cyber Security</span>
+                                <span><i class="fas fa-calendar"></i> Dec 4, 2024</span>
+                                <span><i class="fas fa-folder"></i> PIPEDA</span>
                             </div>
-                            <h3>Password Security: Why Your Employees Are Your Biggest Risk</h3>
-                            <p>Understanding the human element in cyber security and how to train employees against social engineering.</p>
+                            <h3>PIPEDA Explained: Canada's Privacy Law for US Companies</h3>
+                            <p>Doing business with Canadian customers? Here's everything you need to know about PIPEDA compliance and cross-border data flows.</p>
                             <div class="blog-reading-time">
                                 <i class="fas fa-clock"></i> 6 min read
+                            </div>
+                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Post 6: EDRM -->
+                <a href="blog/edrm-process-guide.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="ediscovery" data-title="edrm electronic discovery reference model litigation support legal hold">
+                        <div class="blog-image">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Nov 28, 2024</span>
+                                <span><i class="fas fa-folder"></i> e-Discovery</span>
+                            </div>
+                            <h3>EDRM Process: The Standard Framework for US Litigation Support</h3>
+                            <p>A complete walkthrough of the Electronic Discovery Reference Model — from Information Governance to Presentation in court.</p>
+                            <div class="blog-reading-time">
+                                <i class="fas fa-clock"></i> 8 min read
+                            </div>
+                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Post 7: Ransomware -->
+                <a href="blog/ransomware-first-24-hours.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="incident-response" data-title="ransomware attack response first 24 hours us businesses incident response">
+                        <div class="blog-card-badge">Critical</div>
+                        <div class="blog-image">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Nov 22, 2024</span>
+                                <span><i class="fas fa-folder"></i> Incident Response</span>
+                            </div>
+                            <h3>Ransomware Attack? First 24 Hours Playbook for US Businesses</h3>
+                            <p>Critical step-by-step actions to take in the first 24 hours of a ransomware attack — including legal notification requirements.</p>
+                            <div class="blog-reading-time">
+                                <i class="fas fa-clock"></i> 9 min read
+                            </div>
+                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Post 8: CCPA / CPRA -->
+                <a href="blog/ccpa-cpra-california-privacy.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="ccpa" data-title="ccpa cpra california privacy rights act consumer protection 2025 compliance">
+                        <div class="blog-card-badge">Updated</div>
+                        <div class="blog-image">
+                            <i class="fas fa-flag-usa"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Nov 15, 2024</span>
+                                <span><i class="fas fa-folder"></i> CCPA / CPRA</span>
+                            </div>
+                            <h3>CCPA & CPRA: California Privacy Compliance in 2025</h3>
+                            <p>What's new in California's privacy landscape — CPRA amendments, sensitive personal information rules, and enforcement trends.</p>
+                            <div class="blog-reading-time">
+                                <i class="fas fa-clock"></i> 7 min read
+                            </div>
+                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Post 9: HITECH Act -->
+                <a href="blog/hitech-act-healthcare.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="hipaa" data-title="hitech act healthcare technology hipaa enforcement breach notification digital">
+                        <div class="blog-image">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Nov 10, 2024</span>
+                                <span><i class="fas fa-folder"></i> HIPAA / HITECH</span>
+                            </div>
+                            <h3>HITECH Act: Strengthening HIPAA in the Digital Age</h3>
+                            <p>Understand how the HITECH Act expanded HIPAA enforcement, increased penalties, and modernized healthcare data protection.</p>
+                            <div class="blog-reading-time">
+                                <i class="fas fa-clock"></i> 6 min read
+                            </div>
+                            <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Post 10: DPDP (India - keeping existing) -->
+                <a href="blog/dpdp-act-2023.html" style="text-decoration: none; color: inherit;">
+                    <article class="blog-card" data-category="dpdp" data-title="dpdp act 2023 india digital personal data protection compliance indian businesses">
+                        <div class="blog-image">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Dec 5, 2024</span>
+                                <span><i class="fas fa-folder"></i> DPDP (India)</span>
+                            </div>
+                            <h3>DPDP Act 2023: Complete Guide for Indian Businesses</h3>
+                            <p>India's Digital Personal Data Protection Act explained — compliance requirements, penalties, and implementation roadmap.</p>
+                            <div class="blog-reading-time">
+                                <i class="fas fa-clock"></i> 8 min read
                             </div>
                             <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
@@ -766,8 +792,8 @@
 
             <!-- Newsletter Box -->
             <div class="newsletter-box">
-                <h3>Stay <span class="gradient-text">Ahead</span> of Cyber Threats</h3>
-                <p>Subscribe to our weekly newsletter for the latest cyber security insights, threat alerts, and expert tips.</p>
+                <h3>Stay <span class="gradient-text">Ahead</span> of Compliance Changes</h3>
+                <p>Subscribe to our weekly newsletter for updates on HIPAA, GDPR, CCPA, e-Discovery best practices, and emerging threats.</p>
                 <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
                     <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
                     <button type="submit" class="newsletter-btn">
@@ -853,7 +879,6 @@
 
         const searchInput = document.getElementById('blogSearch');
         const filterBtns = document.querySelectorAll('.blog-filter-btn');
-        const blogCards = document.querySelectorAll('#blogGrid .blog-card');
         const blogLinks = document.querySelectorAll('#blogGrid > a');
         const noResults = document.getElementById('noResults');
 
@@ -863,7 +888,7 @@
         function filterBlogs() {
             let visibleCount = 0;
 
-            blogLinks.forEach((link, index) => {
+            blogLinks.forEach((link) => {
                 const card = link.querySelector('.blog-card');
                 if (!card) return;
 
@@ -887,13 +912,11 @@
             noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         }
 
-        // Search functionality
         searchInput.addEventListener('input', (e) => {
             searchTerm = e.target.value.toLowerCase().trim();
             filterBlogs();
         });
 
-        // Filter buttons
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
@@ -903,7 +926,6 @@
             });
         });
 
-        // Newsletter form
         function handleNewsletter(e) {
             e.preventDefault();
             const btn = e.target.querySelector('.newsletter-btn');
