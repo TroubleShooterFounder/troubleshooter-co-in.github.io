@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPDP Act 2023: Complete Guide for Indian Businesses - Trouble Shooters</title>
+    <meta name="description" content="Complete guide to India's Digital Personal Data Protection Act 2023. Learn about compliance requirements, penalties, data principal rights, and implementation steps.">
+    <meta name="keywords" content="DPDP Act 2023, data protection India, digital personal data protection, compliance, data privacy India">
+
+    <meta property="og:title" content="DPDP Act 2023: Complete Guide for Indian Businesses">
+    <meta property="og:description" content="Everything you need to know about India's landmark data protection law.">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ═══════════════════════════════════════════
+           BLOG POST - SINGLE ARTICLE STYLES
+        ═══════════════════════════════════════════ */
+
+        .article-hero {
+            background: linear-gradient(135deg, #0A0A0A 0%, #111111 100%);
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .article-category-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(0, 191, 255, 0.1);
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            border-radius: 50px;
+            color: #00BFFF;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .article-hero h1 {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-hero p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .article-meta-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .meta-item i {
+            color: #00BFFF;
+        }
+
+        .meta-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-author-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0A0A;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        /* Article Banner Image */
+        .article-banner {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.15), rgba(0, 229, 255, 0.05));
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(45deg, transparent 49%, rgba(0, 191, 255, 0.04) 49%, rgba(0, 191, 255, 0.04) 51%, transparent 51%),
+                linear-gradient(-45deg, transparent 49%, rgba(0, 191, 255, 0.04) 49%, rgba(0, 191, 255, 0.04) 51%, transparent 51%);
+            background-size: 30px 30px;
+        }
+
+        .article-banner i {
+            font-size: 100px;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Article Layout */
+        .article-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr 240px;
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* Share Sidebar */
+        .share-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .share-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 191, 255, 0.3);
+        }
+
+        .share-btn.linkedin:hover {
+            background: rgba(10, 102, 194, 0.15);
+            color: #0A66C2;
+            border-color: #0A66C2;
+        }
+
+        .share-btn.twitter:hover {
+            background: rgba(29, 161, 242, 0.15);
+            color: #1DA1F2;
+            border-color: #1DA1F2;
+        }
+
+        .share-btn.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.15);
+            color: #25D366;
+            border-color: #25D366;
+        }
+
+        .share-btn.facebook:hover {
+            background: rgba(24, 119, 242, 0.15);
+            color: #1877F2;
+            border-color: #1877F2;
+        }
+
+        .share-btn.copy:hover {
+            background: rgba(0, 191, 255, 0.15);
+            color: #00BFFF;
+            border-color: #00BFFF;
+        }
+
+        /* Article Content */
+        .article-content {
+            min-width: 0;
+        }
+
+        .article-content > p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 22px;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 50px 0 20px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(0, 191, 255, 0.15);
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #00BFFF;
+            margin: 35px 0 16px;
+        }
+
+        .article-content h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 25px 0 12px;
+        }
+
+        .article-content ul, .article-content ol {
+            padding-left: 24px;
+            margin-bottom: 22px;
+        }
+
+        .article-content ul li, .article-content ol li {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 10px;
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .article-content a {
+            color: #00BFFF;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0, 191, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #00BFFF;
+            color: #00E5FF;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: rgba(0, 191, 255, 0.06);
+            border-left: 4px solid #00BFFF;
+            border-radius: 0 12px 12px 0;
+            padding: 20px 24px;
+            margin: 30px 0;
+        }
+
+        .highlight-box.warning {
+            background: rgba(255, 71, 87, 0.06);
+            border-left-color: #FF4757;
+        }
+
+        .highlight-box.success {
+            background: rgba(0, 214, 143, 0.06);
+            border-left-color: #00D68F;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .highlight-box .box-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-box .box-title i {
+            color: #00BFFF;
+        }
+
+        .highlight-box.warning .box-title i {
+            color: #FF4757;
+        }
+
+        .highlight-box.success .box-title i {
+            color: #00D68F;
+        }
+
+        /* Stats Grid in Article */
+        .article-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .stat-box-number {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .stat-box-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* Table */
+        .article-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .article-table th {
+            background: rgba(0, 191, 255, 0.1);
+            color: #00BFFF;
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .article-table td {
+            padding: 14px 18px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        /* TOC Sidebar */
+        .toc-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .toc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 20px;
+        }
+
+        .toc-card-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #00BFFF;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .toc-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-card ul li {
+            margin-bottom: 4px;
+        }
+
+        .toc-card ul li a {
+            display: block;
+            padding: 8px 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            border-left: 2px solid transparent;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .toc-card ul li a:hover,
+        .toc-card ul li a.active {
+            color: #00BFFF;
+            background: rgba(0, 191, 255, 0.06);
+            border-left-color: #00BFFF;
+            padding-left: 16px;
+        }
+
+        /* CTA in Article */
+        .article-cta {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.12), rgba(0, 229, 255, 0.04));
+            border: 1px solid rgba(0, 191, 255, 0.25);
+            border-radius: 20px;
+            padding: 40px 35px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .article-cta h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .article-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        /* Author Card */
+        .author-card {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin: 50px 0;
+            align-items: center;
+        }
+
+        .author-card-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00BFFF, #00E5FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0A0A;
+            font-weight: 800;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .author-card-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .author-card-info p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Related Posts */
+        .related-posts {
+            margin-top: 60px;
+            padding-top: 50px;
+            border-top: 1px solid var(--border);
+        }
+
+        .related-posts h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .related-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .related-card:hover {
+            border-color: rgba(0, 191, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 191, 255, 0.08);
+        }
+
+        .related-card-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 191, 255, 0.1);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00BFFF;
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        .related-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .related-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Breadcrumb */
+        .article-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .article-breadcrumb a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        .article-breadcrumb a:hover {
+            color: #00E5FF;
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .article-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .share-sidebar, .toc-sidebar {
+                position: static;
+            }
+
+            .share-sidebar {
+                order: 3;
+                margin-top: 40px;
+            }
+
+            .toc-sidebar {
+                order: -1;
+                margin-bottom: 30px;
+            }
+
+            .share-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .share-btn {
+                flex: 1;
+                min-width: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-hero h1 {
+                font-size: 28px;
+            }
+
+            .article-hero p {
+                font-size: 15px;
+            }
+
+            .article-meta-bar {
+                gap: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 22px;
+            }
+
+            .article-content h3 {
+                font-size: 18px;
+            }
+
+            .article-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .author-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .article-banner {
+                height: 200px;
+            }
+
+            .article-banner i {
+                font-size: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Trouble Shooters" class="nav-logo">
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-name">TROUBLE SHOOTERS</span>
+                        <span class="nav-brand-tagline">Cyber Security Experts</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <div class="nav-dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="nav-dropdown-menu">
+                        <a href="../services/ediscovery.html" class="nav-dropdown-item"><i class="fas fa-magnifying-glass-chart"></i> e-Discovery</a>
+                        <a href="../services/data-breach-response.html" class="nav-dropdown-item"><i class="fas fa-shield-virus"></i> Data Breach Response</a>
+                        <a href="../services/incident-response.html" class="nav-dropdown-item"><i class="fas fa-user-shield"></i> Incident Response</a>
+                        <a href="../services/document-review.html" class="nav-dropdown-item"><i class="fas fa-file-shield"></i> Document Review</a>
+                        <a href="../services/clm.html" class="nav-dropdown-item"><i class="fas fa-file-contract"></i> CLM</a>
+                        <a href="../services/it-support.html" class="nav-dropdown-item"><i class="fas fa-headset"></i> IT Support</a>
+                    </div>
+                </div>
+                <a href="../blog.html" class="nav-link active">Blog</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+                <a href="../contact.html" class="nav-btn">Get Started</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <a href="../blog.html">Blog</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <span>DPDP Act 2023 Guide</span>
+            </div>
+            <div class="article-hero-content">
+                <span class="article-category-tag">
+                    <i class="fas fa-database"></i> Data Protection
+                </span>
+                <h1>DPDP Act 2023: Complete Guide for Indian Businesses</h1>
+                <p>India's Digital Personal Data Protection Act, 2023 is here. Learn everything you need to know about compliance requirements, penalties, data principal rights, and practical implementation steps for your organization.</p>
+
+                <div class="article-meta-bar">
+                    <div class="meta-item meta-author">
+                        <div class="meta-author-avatar">TS</div>
+                        <span>Trouble Shooters Team</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i> December 5, 2024
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i> 8 min read
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-eye"></i> 1.2k views
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <div class="article-layout">
+
+        <!-- LEFT: Share Buttons -->
+        <aside class="share-sidebar">
+            <div class="share-title">Share Article</div>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://troubleshooter.co.in/blog/dpdp-act-2023.html" target="_blank" class="share-btn linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://troubleshooter.co.in/blog/dpdp-act-2023.html&text=DPDP Act 2023 Complete Guide" target="_blank" class="share-btn twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://wa.me/?text=Check this article: https://troubleshooter.co.in/blog/dpdp-act-2023.html" target="_blank" class="share-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://troubleshooter.co.in/blog/dpdp-act-2023.html" target="_blank" class="share-btn facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <button onclick="copyLink()" class="share-btn copy" id="copyBtn">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+            </div>
+        </aside>
+
+        <!-- CENTER: Article Content -->
+        <main class="article-content">
+
+            <!-- Banner Image -->
+            <div class="article-banner">
+                <i class="fas fa-database"></i>
+            </div>
+
+            <p>India has officially entered a new era of data protection. The <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong> received Presidential assent on August 11, 2023, marking a historic moment for data privacy in the country. This comprehensive legislation fundamentally changes how Indian businesses collect, store, process, and protect personal data.</p>
+
+            <p>Whether you run a startup, SME, or large enterprise, DPDP Act compliance is no longer optional — it's a legal mandate with significant financial penalties for non-compliance. In this guide, we break down everything you need to know.</p>
+
+            <div class="highlight-box">
+                <div class="box-title"><i class="fas fa-circle-info"></i> Quick Summary</div>
+                <p>The DPDP Act 2023 is India's first comprehensive data protection law, governing how organizations handle the personal data of Indian citizens. Non-compliance can result in penalties up to <strong>₹250 crore per violation</strong>.</p>
+            </div>
+
+            <h2 id="what-is-dpdp">What is the DPDP Act 2023?</h2>
+            <p>The Digital Personal Data Protection Act, 2023 is India's landmark data protection legislation that replaces the existing IT Act 2000 framework for digital personal data. It establishes a comprehensive legal structure for processing personal data while balancing individual privacy rights with legitimate business needs.</p>
+
+            <p>The Act applies to:</p>
+            <ul>
+                <li>Processing of digital personal data within India</li>
+                <li>Processing outside India if it relates to offering goods/services to Indian citizens</li>
+                <li>All organizations regardless of size — startups, SMEs, MNCs, government bodies</li>
+            </ul>
+
+            <h2 id="key-stats">DPDP Act by the Numbers</h2>
+            <div class="article-stats">
+                <div class="stat-box">
+                    <span class="stat-box-number">₹250 Cr</span>
+                    <span class="stat-box-label">Max Penalty Per Violation</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">72 Hrs</span>
+                    <span class="stat-box-label">Breach Notification Window</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-box-number">18+</span>
+                    <span class="stat-box-label">Minimum Age for Consent</span>
+                </div>
+            </div>
+
+            <h2 id="key-terms">Key Terms You Must Know</h2>
+
+            <h3>Data Principal</h3>
+            <p>The individual whose personal data is being processed — essentially, every Indian citizen whose data your business handles.</p>
+
+            <h3>Data Fiduciary</h3>
+            <p>The entity (business or organization) that determines the purpose and means of processing personal data. <strong>Your company is a Data Fiduciary</strong> if you collect customer data.</p>
+
+            <h3>Data Processor</h3>
+            <p>A third party that processes personal data on behalf of a Data Fiduciary — like your cloud hosting provider or payment gateway.</p>
+
+            <h3>Significant Data Fiduciary (SDF)</h3>
+            <p>Organizations processing large volumes of sensitive data, classified by the government, with additional compliance obligations.</p>
+
+            <h2 id="rights">Rights of Data Principals</h2>
+            <p>The DPDP Act grants Indian citizens powerful rights over their personal data:</p>
+            <ul>
+                <li><strong>Right to Information:</strong> Know what data is being collected and how it's used</li>
+                <li><strong>Right to Correction & Erasure:</strong> Update inaccurate data or request deletion</li>
+                <li><strong>Right to Grievance Redressal:</strong> File complaints with the organization or Data Protection Board</li>
+                <li><strong>Right to Nominate:</strong> Designate someone to exercise rights in case of death or incapacity</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw previously given consent at any time</li>
+            </ul>
+
+            <h2 id="obligations">Obligations of Businesses (Data Fiduciaries)</h2>
+            <p>If your business handles Indian citizens' personal data, you must:</p>
+
+            <h3>1. Obtain Valid Consent</h3>
+            <p>Consent must be <strong>free, specific, informed, unconditional, and unambiguous</strong>. Pre-ticked checkboxes and bundled consent are not valid. You must provide consent notices in <strong>22 official Indian languages</strong>.</p>
+
+            <h3>2. Implement Reasonable Security Safeguards</h3>
+            <p>Protect personal data through:</p>
+            <ul>
+                <li>Encryption (in-transit and at-rest)</li>
+                <li>Access controls and authentication</li>
+                <li>Regular security audits</li>
+                <li>Employee training on data protection</li>
+            </ul>
+
+            <h3>3. Report Data Breaches</h3>
+            <p>Notify both the affected Data Principals <strong>and</strong> the Data Protection Board of India within prescribed timelines.</p>
+
+            <h3>4. Appoint a Data Protection Officer (DPO)</h3>
+            <p>Significant Data Fiduciaries must appoint a DPO based in India.</p>
+
+            <h3>5. Maintain Records & Conduct DPIAs</h3>
+            <p>Maintain processing records and conduct Data Protection Impact Assessments for high-risk processing activities.</p>
+
+            <div class="highlight-box warning">
+                <div class="box-title"><i class="fas fa-triangle-exclamation"></i> Penalty Alert</div>
+                <p>Failure to take reasonable security safeguards leading to a data breach can result in a penalty of up to <strong>₹250 crore</strong>. Failure to notify breach: up to <strong>₹200 crore</strong>.</p>
+            </div>
+
+            <h2 id="penalties">Penalty Structure</h2>
+            <div style="overflow-x: auto;">
+                <table class="article-table">
+                    <thead>
+                        <tr>
+                            <th>Violation Type</th>
+                            <th>Maximum Penalty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Failure to protect personal data</td>
+                            <td>₹250 crore</td>
+                        </tr>
+                        <tr>
+                            <td>Failure to notify data breach</td>
+                            <td>₹200 crore</td>
+                        </tr>
+                        <tr>
+                            <td>Non-fulfillment of obligations to children</td>
+                            <td>₹200 crore</td>
+                        </tr>
+                        <tr>
+                            <td>Breach of other provisions</td>
+                            <td>₹50 crore</td>
+                        </tr>
+                        <tr>
+                            <td>Breach by Data Principal (false info)</td>
+                            <td>₹10,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="implementation">Practical Implementation Roadmap</h2>
+            <p>Here's a step-by-step approach to becoming DPDP Act compliant:</p>
+
+            <h3>Step 1: Data Audit & Mapping</h3>
+            <p>Map all personal data flows in your organization. Identify what data you collect, where it's stored, who has access, and how long you retain it.</p>
+
+            <h3>Step 2: Update Consent Mechanisms</h3>
+            <p>Redesign your consent forms, privacy notices, and cookie banners to meet DPDP requirements. Ensure consent is granular and unambiguous.</p>
+
+            <h3>Step 3: Strengthen Security Controls</h3>
+            <p>Implement encryption, access controls, multi-factor authentication, and regular vulnerability assessments. <a href="../services/incident-response.html">Cyber security expertise</a> is critical here.</p>
+
+            <h3>Step 4: Update Privacy Policy</h3>
+            <p>Rewrite your <a href="../privacy-policy.html">Privacy Policy</a> to clearly describe data processing activities, retention periods, and Data Principal rights.</p>
+
+            <h3>Step 5: Establish Breach Response Plan</h3>
+            <p>Create a formal incident response plan with clear roles, timelines, and notification procedures. Time is critical when a breach occurs.</p>
+
+            <h3>Step 6: Train Your Team</h3>
+            <p>Conduct organization-wide training on DPDP Act requirements. Every employee handling data is a potential compliance risk.</p>
+
+            <h3>Step 7: Vendor Management</h3>
+            <p>Review contracts with all third-party processors. Ensure Data Processing Agreements (DPAs) are in place with appropriate safeguards.</p>
+
+            <div class="highlight-box success">
+                <div class="box-title"><i class="fas fa-circle-check"></i> Pro Tip</div>
+                <p>Start your DPDP compliance journey early. The rules are being phased in, but organizations that wait will face a rushed, expensive implementation later. <strong>Compliance is a competitive advantage</strong> — clients prefer working with compliant vendors.</p>
+            </div>
+
+            <h2 id="children">Special Provisions for Children</h2>
+            <p>The DPDP Act has strict rules for processing personal data of children (under 18 years):</p>
+            <ul>
+                <li><strong>Verifiable parental consent</strong> required before processing</li>
+                <li><strong>No tracking, behavioral monitoring, or targeted advertising</strong> directed at children</li>
+                <li>Cannot process children's data in ways that may cause <strong>detrimental effects</strong></li>
+            </ul>
+
+            <h2 id="cross-border">Cross-Border Data Transfers</h2>
+            <p>The Act adopts a <strong>"blacklist" approach</strong> — personal data can be transferred to any country EXCEPT those specifically notified by the government as restricted. This is more business-friendly than GDPR's whitelist approach.</p>
+
+            <h2 id="enforcement">Enforcement & Data Protection Board</h2>
+            <p>The Act establishes the <strong>Data Protection Board of India</strong> as the primary enforcement body. The Board has powers to:</p>
+            <ul>
+                <li>Investigate complaints and breaches</li>
+                <li>Impose monetary penalties</li>
+                <li>Direct corrective actions</li>
+                <li>Issue binding orders</li>
+            </ul>
+
+            <!-- CTA -->
+            <div class="article-cta">
+                <h3>Need Help with DPDP Act Compliance?</h3>
+                <p>Our experts can audit your current data practices, identify compliance gaps, and implement a comprehensive DPDP compliance program for your organization.</p>
+                <a href="../contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-shield-halved"></i> Get DPDP Compliance Audit
+                </a>
+            </div>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>The DPDP Act 2023 represents a fundamental shift in how Indian businesses must approach data privacy. While the compliance journey may seem daunting, it's also an opportunity to build trust with customers, gain competitive advantage, and avoid significant financial penalties.</p>
+
+            <p>The key is to <strong>start now</strong>, not wait for the rules to be fully notified. Organizations that proactively embrace DPDP compliance will be best positioned for the data-driven future of Indian business.</p>
+
+            <p>Remember: <strong>Data protection is not a one-time project — it's an ongoing commitment</strong>. Build the right culture, processes, and technical safeguards now, and you'll be ready for whatever comes next.</p>
+
+            <!-- Author Card -->
+            <div class="author-card">
+                <div class="author-card-avatar">TS</div>
+                <div class="author-card-info">
+                    <h4>Trouble Shooters Team</h4>
+                    <p>Our team of cyber security experts, e-Discovery specialists, and compliance consultants helps Indian businesses navigate complex data protection regulations and build robust security programs.</p>
+                </div>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-grid">
+                    <a href="cyber-threats-2025.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-shield-virus"></i></div>
+                        <h4>Top 10 Cyber Threats Indian Businesses Face in 2025</h4>
+                        <p>Cyber Security · 7 min read</p>
+                    </a>
+                    <a href="ransomware-first-24-hours.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-user-shield"></i></div>
+                        <h4>Ransomware Attack? What to Do in First 24 Hours</h4>
+                        <p>Incident Response · 9 min read</p>
+                    </a>
+                    <a href="password-security.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-lock"></i></div>
+                        <h4>Password Security: Why Employees Are Your Biggest Risk</h4>
+                        <p>Cyber Security · 6 min read</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- RIGHT: TOC Sidebar -->
+        <aside class="toc-sidebar">
+            <div class="toc-card">
+                <div class="toc-card-title">
+                    <i class="fas fa-list"></i> In This Article
+                </div>
+                <ul>
+                    <li><a href="#what-is-dpdp" class="toc-link">What is DPDP Act 2023?</a></li>
+                    <li><a href="#key-stats" class="toc-link">DPDP by the Numbers</a></li>
+                    <li><a href="#key-terms" class="toc-link">Key Terms</a></li>
+                    <li><a href="#rights" class="toc-link">Data Principal Rights</a></li>
+                    <li><a href="#obligations" class="toc-link">Business Obligations</a></li>
+                    <li><a href="#penalties" class="toc-link">Penalty Structure</a></li>
+                    <li><a href="#implementation" class="toc-link">Implementation Steps</a></li>
+                    <li><a href="#children" class="toc-link">Children's Data Rules</a></li>
+                    <li><a href="#cross-border" class="toc-link">Cross-Border Transfers</a></li>
+                    <li><a href="#enforcement" class="toc-link">Enforcement</a></li>
+                    <li><a href="#conclusion" class="toc-link">Conclusion</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="../images/logo.png" alt="Trouble Shooters" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">TROUBLE SHOOTERS</span>
+                            <span class="footer-brand-tagline">Cyber Security Experts</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/ediscovery.html">e-Discovery</a></li>
+                        <li><a href="../services/data-breach-response.html">Data Breach Response</a></li>
+                        <li><a href="../services/incident-response.html">Cyber Incident Response</a></li>
+                        <li><a href="../services/document-review.html">Document Review</a></li>
+                        <li><a href="../services/clm.html">CLM</a></li>
+                        <li><a href="../services/it-support.html">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@troubleshooter.co.in</p>
+                        <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                        <p><i class="fas fa-location-dot"></i> India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trouble Shooters. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        // Copy link function
+        function copyLink() {
+            const btn = document.getElementById('copyBtn');
+            const url = window.location.href;
+
+            navigator.clipboard.writeText(url).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = 'rgba(0, 214, 143, 0.15)';
+                btn.style.color = '#00D68F';
+                btn.style.borderColor = '#00D68F';
+
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        // Active TOC highlight on scroll
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const headings = document.querySelectorAll('.article-content h2[id]');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        headings.forEach(h => observer.observe(h));
+
+        // Smooth scroll for TOC
+        tocLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
