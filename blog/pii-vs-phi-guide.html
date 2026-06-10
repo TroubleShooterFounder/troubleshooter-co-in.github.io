@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII vs PHI: Complete Data Classification Guide - Trouble Shooters</title>
+    <meta name="description" content="Master the difference between Personally Identifiable Information (PII) and Protected Health Information (PHI) - examples, regulations, and best practices for compliance.">
+    <meta name="keywords" content="PII vs PHI, data classification, personally identifiable information, protected health information, HIPAA, GDPR, data privacy">
+
+    <meta property="og:title" content="PII vs PHI: Complete Data Classification Guide">
+    <meta property="og:description" content="Understand the critical differences between PII and PHI for regulatory compliance.">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Trouble Shooters" class="nav-logo">
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-name">TROUBLE SHOOTERS</span>
+                        <span class="nav-brand-tagline">Cyber Security Experts</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <div class="nav-dropdown-toggle">Services <i class="fas fa-chevron-down"></i></div>
+                    <div class="nav-dropdown-menu">
+                        <a href="../services/ediscovery.html" class="nav-dropdown-item"><i class="fas fa-magnifying-glass-chart"></i> e-Discovery</a>
+                        <a href="../services/data-breach-response.html" class="nav-dropdown-item"><i class="fas fa-shield-virus"></i> Data Breach Response</a>
+                        <a href="../services/incident-response.html" class="nav-dropdown-item"><i class="fas fa-user-shield"></i> Incident Response</a>
+                        <a href="../services/document-review.html" class="nav-dropdown-item"><i class="fas fa-file-shield"></i> Document Review</a>
+                        <a href="../services/clm.html" class="nav-dropdown-item"><i class="fas fa-file-contract"></i> CLM</a>
+                        <a href="../services/it-support.html" class="nav-dropdown-item"><i class="fas fa-headset"></i> IT Support</a>
+                    </div>
+                </div>
+                <a href="../blog.html" class="nav-link active">Blog</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+                <a href="../contact.html" class="nav-btn">Get Started</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <a href="../blog.html">Blog</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <span>PII vs PHI Guide</span>
+            </div>
+            <div class="article-hero-content">
+                <span class="article-category-tag"><i class="fas fa-database"></i> Data Classification</span>
+                <h1>PII vs PHI: Complete Data Classification Guide for Compliance</h1>
+                <p>Master the critical differences between Personally Identifiable Information (PII) and Protected Health Information (PHI) — with examples, regulatory frameworks, and practical classification strategies for your organization.</p>
+                <div class="article-meta-bar">
+                    <div class="meta-item meta-author"><div class="meta-author-avatar">TS</div><span>Trouble Shooters Team</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i> December 12, 2024</div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> 7 min read</div>
+                    <div class="meta-item"><i class="fas fa-eye"></i> 1.5k views</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="article-layout">
+        <aside class="share-sidebar">
+            <div class="share-title">Share Article</div>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://troubleshooter.co.in/blog/pii-vs-phi-guide.html" target="_blank" class="share-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com/intent/tweet?url=https://troubleshooter.co.in/blog/pii-vs-phi-guide.html&text=PII vs PHI Complete Guide" target="_blank" class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://wa.me/?text=Check this article: https://troubleshooter.co.in/blog/pii-vs-phi-guide.html" target="_blank" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://troubleshooter.co.in/blog/pii-vs-phi-guide.html" target="_blank" class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                <button onclick="copyLink()" class="share-btn copy" id="copyBtn"><i class="fas fa-link"></i> Copy Link</button>
+            </div>
+        </aside>
+
+        <main class="article-content">
+            <div class="article-banner"><i class="fas fa-database"></i></div>
+
+            <p>In the world of data privacy and security, two acronyms come up constantly: <strong>PII (Personally Identifiable Information)</strong> and <strong>PHI (Protected Health Information)</strong>. While related, they refer to different categories of sensitive data — each governed by distinct regulations and requiring specific protection measures.</p>
+
+            <p>Misclassifying data can lead to <strong>compliance violations, hefty fines, and damaged customer trust</strong>. Whether you're a startup founder, IT professional, or compliance officer, understanding these distinctions is fundamental to building a robust data protection strategy.</p>
+
+            <div class="highlight-box">
+                <div class="box-title"><i class="fas fa-circle-info"></i> Quick Summary</div>
+                <p><strong>PII</strong> = Any data that can identify an individual (name, email, SSN). <strong>PHI</strong> = PII + health information held by HIPAA-covered entities. <strong>All PHI is PII, but not all PII is PHI.</strong></p>
+            </div>
+
+            <h2 id="what-is-pii">What is PII?</h2>
+            <p><strong>Personally Identifiable Information (PII)</strong> is any data that can be used — alone or combined with other information — to identify, contact, or locate a specific individual.</p>
+
+            <p>The US National Institute of Standards and Technology (NIST) defines PII as information that can be linked to a specific person through "direct" or "indirect" identification.</p>
+
+            <h3>Types of PII</h3>
+
+            <h4>Direct Identifiers (Sensitive PII)</h4>
+            <ul>
+                <li>Full name</li>
+                <li>Social Security Number (SSN)</li>
+                <li>Driver's license number</li>
+                <li>Passport number</li>
+                <li>Financial account numbers</li>
+                <li>Biometric data (fingerprints, facial recognition, DNA)</li>
+                <li>Credit card numbers</li>
+            </ul>
+
+            <h4>Indirect Identifiers (Non-Sensitive PII)</h4>
+            <ul>
+                <li>ZIP code</li>
+                <li>Date of birth</li>
+                <li>Gender</li>
+                <li>Race</li>
+                <li>Job title</li>
+                <li>Place of employment</li>
+                <li>Education level</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <div class="box-title"><i class="fas fa-triangle-exclamation"></i> Important</div>
+                <p>Studies show that <strong>87% of US population</strong> can be uniquely identified using just <strong>ZIP code + birth date + gender</strong>. Indirect identifiers combined become sensitive PII.</p>
+            </div>
+
+            <h2 id="what-is-phi">What is PHI?</h2>
+            <p><strong>Protected Health Information (PHI)</strong> is a specific subset of PII that includes any individually identifiable health information created, received, maintained, or transmitted by a <a href="hipaa-compliance-guide.html">HIPAA-covered entity</a> or business associate.</p>
+
+            <p>The key distinction: PHI relates to a person's <strong>past, present, or future physical or mental health</strong>, healthcare services received, or payment for healthcare services.</p>
+
+            <h3>What Qualifies as PHI?</h3>
+            <p>PHI includes health information combined with any of the 18 HIPAA identifiers:</p>
+            <ul>
+                <li>Names</li>
+                <li>Geographic data (smaller than state)</li>
+                <li>Dates (birth, admission, discharge, death)</li>
+                <li>Phone/fax numbers</li>
+                <li>Email addresses</li>
+                <li>Social Security numbers</li>
+                <li>Medical record numbers</li>
+                <li>Health plan beneficiary numbers</li>
+                <li>Account numbers, license numbers</li>
+                <li>Vehicle identifiers, device serial numbers</li>
+                <li>Web URLs, IP addresses</li>
+                <li>Biometric identifiers</li>
+                <li>Full-face photos</li>
+                <li>Any other unique identifying characteristic</li>
+            </ul>
+
+            <h2 id="key-stats">PII & PHI by the Numbers</h2>
+            <div class="article-stats">
+                <div class="stat-box"><span class="stat-box-number">$4.45M</span><span class="stat-box-label">Average Data Breach Cost</span></div>
+                <div class="stat-box"><span class="stat-box-number">$10.93M</span><span class="stat-box-label">Healthcare Breach Avg</span></div>
+                <div class="stat-box"><span class="stat-box-number">18</span><span class="stat-box-label">HIPAA Identifiers</span></div>
+            </div>
+
+            <h2 id="key-differences">PII vs PHI: Key Differences</h2>
+            <div style="overflow-x: auto;">
+                <table class="article-table">
+                    <thead>
+                        <tr><th>Aspect</th><th>PII</th><th>PHI</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Scope</td><td>Any identifying personal data</td><td>Health-related PII only</td></tr>
+                        <tr><td>Regulatory Body</td><td>FTC, State AGs, GDPR, CCPA</td><td>HHS Office for Civil Rights</td></tr>
+                        <tr><td>Primary Law</td><td>GDPR, CCPA, State laws</td><td>HIPAA + HITECH Act</td></tr>
+                        <tr><td>Covered Entities</td><td>Any organization</td><td>Healthcare providers, plans, clearinghouses</td></tr>
+                        <tr><td>Penalties</td><td>Varies by jurisdiction</td><td>Up to $1.9M/year per category</td></tr>
+                        <tr><td>Breach Notification</td><td>Varies by state/law</td><td>60 days (HIPAA mandate)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="real-examples">Real-World Examples</h2>
+
+            <h3>PII Only (Not PHI)</h3>
+            <ul>
+                <li>Customer name + email on an e-commerce site</li>
+                <li>Employee SSN in HR database</li>
+                <li>Bank account number on a financial statement</li>
+                <li>Driver's license number at a hotel check-in</li>
+            </ul>
+
+            <h3>PHI (Always Also PII)</h3>
+            <ul>
+                <li>Patient name + diagnosis in EHR system</li>
+                <li>Insurance claim with medical billing codes</li>
+                <li>Lab results sent to a doctor</li>
+                <li>Prescription record with patient identifier</li>
+                <li>Mental health therapy notes</li>
+            </ul>
+
+            <div class="highlight-box success">
+                <div class="box-title"><i class="fas fa-circle-check"></i> The Critical Test</div>
+                <p>Ask yourself: <strong>"Is this health information held by a HIPAA-covered entity or business associate?"</strong> If YES → it's PHI. If NO → it's likely PII subject to other privacy laws.</p>
+            </div>
+
+            <h2 id="when-phi-becomes-pii">When PHI Becomes Just PII</h2>
+            <p>Health information loses its PHI status (and HIPAA protection) when:</p>
+            <ul>
+                <li><strong>De-identified:</strong> Stripped of all 18 HIPAA identifiers (Safe Harbor method)</li>
+                <li><strong>Not held by covered entity:</strong> e.g., your Fitbit data is health info but not PHI</li>
+                <li><strong>Held by non-HIPAA entity:</strong> Health apps, wellness programs outside healthcare context</li>
+                <li><strong>Employment records:</strong> Even with health info, employment records aren't PHI</li>
+                <li><strong>Educational records:</strong> Health info in school records is FERPA, not HIPAA</li>
+            </ul>
+
+            <h2 id="protection-strategies">Protection Strategies</h2>
+
+            <h3>For PII</h3>
+            <ul>
+                <li>Implement <strong>data classification policies</strong></li>
+                <li>Use <strong>encryption</strong> (at-rest and in-transit)</li>
+                <li>Apply <strong>access controls</strong> based on need-to-know</li>
+                <li>Maintain <strong>audit logs</strong> of who accessed what</li>
+                <li>Provide <strong>privacy notices</strong> to data subjects</li>
+                <li>Honor <strong>data subject rights</strong> (access, deletion, correction)</li>
+            </ul>
+
+            <h3>For PHI (Additional Requirements)</h3>
+            <ul>
+                <li>Conduct annual <strong>HIPAA risk assessments</strong></li>
+                <li>Execute <strong>Business Associate Agreements (BAAs)</strong></li>
+                <li>Implement <strong>technical safeguards</strong> (access controls, audit logs, encryption)</li>
+                <li>Maintain <strong>physical safeguards</strong> for ePHI storage</li>
+                <li>Provide <strong>HIPAA training</strong> to all workforce members</li>
+                <li>Have <strong>breach notification procedures</strong> ready</li>
+            </ul>
+
+            <div class="article-cta">
+                <h3>Need Help with Data Classification?</h3>
+                <p>Our experts can help you classify, inventory, and protect PII and PHI across your organization to meet all regulatory requirements.</p>
+                <a href="../contact.html" class="btn btn-primary btn-lg"><i class="fas fa-shield-halved"></i> Get Data Classification Audit</a>
+            </div>
+
+            <h2 id="other-classifications">Other Important Data Classifications</h2>
+            <p>Beyond PII and PHI, you should be aware of:</p>
+            <ul>
+                <li><strong>NPI (Non-Public Information):</strong> Financial data under GLBA</li>
+                <li><strong>CUI (Controlled Unclassified Information):</strong> Government-related data</li>
+                <li><strong>PCI Data:</strong> Payment card information under PCI-DSS</li>
+                <li><strong>FERPA Records:</strong> Student education records</li>
+                <li><strong>Trade Secrets:</strong> Confidential business information</li>
+            </ul>
+
+            <h2 id="best-practices">Best Practices for Data Classification</h2>
+
+            <h3>Step 1: Data Discovery</h3>
+            <p>Inventory all data your organization collects, processes, and stores. Use automated discovery tools for accuracy.</p>
+
+            <h3>Step 2: Classification Framework</h3>
+            <p>Create tiers like Public, Internal, Confidential, Restricted — and map data types to each tier.</p>
+
+            <h3>Step 3: Labeling</h3>
+            <p>Apply visible labels to documents, emails, and systems indicating sensitivity level.</p>
+
+            <h3>Step 4: Handling Procedures</h3>
+            <p>Define how each classification tier must be stored, transmitted, shared, and destroyed.</p>
+
+            <h3>Step 5: Training</h3>
+            <p>Train all employees to recognize and properly handle different data classifications.</p>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>Understanding the difference between PII and PHI is the foundation of effective data privacy compliance. PII casts a wide net covering any identifying information, while PHI is the specialized subset governed by HIPAA in healthcare contexts.</p>
+
+            <p>The most important takeaway: <strong>classify your data accurately</strong>, apply the appropriate regulatory framework, and implement robust protection measures. When in doubt, treat data as more sensitive rather than less — the cost of over-protection is far less than the cost of a breach.</p>
+
+            <div class="author-card">
+                <div class="author-card-avatar">TS</div>
+                <div class="author-card-info">
+                    <h4>Trouble Shooters Team</h4>
+                    <p>Our data privacy and compliance experts help organizations classify, inventory, and protect sensitive data across all major regulatory frameworks including HIPAA, GDPR, CCPA, and more.</p>
+                </div>
+            </div>
+
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-grid">
+                    <a href="hipaa-compliance-guide.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-hospital"></i></div>
+                        <h4>HIPAA Compliance Guide for Healthcare</h4>
+                        <p>HIPAA · 10 min read</p>
+                    </a>
+                    <a href="gdpr-vs-ccpa.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-globe"></i></div>
+                        <h4>GDPR vs CCPA: Key Differences</h4>
+                        <p>Privacy Laws · 8 min read</p>
+                    </a>
+                    <a href="ferpa-compliance-edtech.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>FERPA Compliance for EdTech</h4>
+                        <p>FERPA · 7 min read</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <aside class="toc-sidebar">
+            <div class="toc-card">
+                <div class="toc-card-title"><i class="fas fa-list"></i> In This Article</div>
+                <ul>
+                    <li><a href="#what-is-pii" class="toc-link">What is PII?</a></li>
+                    <li><a href="#what-is-phi" class="toc-link">What is PHI?</a></li>
+                    <li><a href="#key-stats" class="toc-link">By the Numbers</a></li>
+                    <li><a href="#key-differences" class="toc-link">Key Differences</a></li>
+                    <li><a href="#real-examples" class="toc-link">Real Examples</a></li>
+                    <li><a href="#when-phi-becomes-pii" class="toc-link">When PHI Becomes PII</a></li>
+                    <li><a href="#protection-strategies" class="toc-link">Protection Strategies</a></li>
+                    <li><a href="#other-classifications" class="toc-link">Other Classifications</a></li>
+                    <li><a href="#best-practices" class="toc-link">Best Practices</a></li>
+                    <li><a href="#conclusion" class="toc-link">Conclusion</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="../images/logo.png" alt="Trouble Shooters" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">TROUBLE SHOOTERS</span>
+                            <span class="footer-brand-tagline">Cyber Security Experts</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/ediscovery.html">e-Discovery</a></li>
+                        <li><a href="../services/data-breach-response.html">Data Breach Response</a></li>
+                        <li><a href="../services/incident-response.html">Cyber Incident Response</a></li>
+                        <li><a href="../services/document-review.html">Document Review</a></li>
+                        <li><a href="../services/clm.html">CLM</a></li>
+                        <li><a href="../services/it-support.html">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@troubleshooter.co.in</p>
+                        <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                        <p><i class="fas fa-location-dot"></i> India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trouble Shooters. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/blog-post.js"></script>
+</body>
+</html>
