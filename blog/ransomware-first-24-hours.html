@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomware Attack? First 24 Hours Playbook for US Businesses - Trouble Shooters</title>
+    <meta name="description" content="Critical step-by-step ransomware response playbook for the first 24 hours. Learn what to do, who to call, legal notification requirements, and how to minimize damage.">
+    <meta name="keywords" content="ransomware response, ransomware attack, incident response, cyber attack first 24 hours, ransomware playbook, business continuity">
+
+    <meta property="og:title" content="Ransomware Attack? First 24 Hours Playbook for US Businesses">
+    <meta property="og:description" content="Critical step-by-step actions to take in the first 24 hours of a ransomware attack.">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Trouble Shooters" class="nav-logo">
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-name">TROUBLE SHOOTERS</span>
+                        <span class="nav-brand-tagline">Cyber Security Experts</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <div class="nav-dropdown" id="servicesDropdown">
+                    <div class="nav-dropdown-toggle">Services <i class="fas fa-chevron-down"></i></div>
+                    <div class="nav-dropdown-menu">
+                        <a href="../services/ediscovery.html" class="nav-dropdown-item"><i class="fas fa-magnifying-glass-chart"></i> e-Discovery</a>
+                        <a href="../services/data-breach-response.html" class="nav-dropdown-item"><i class="fas fa-shield-virus"></i> Data Breach Response</a>
+                        <a href="../services/incident-response.html" class="nav-dropdown-item"><i class="fas fa-user-shield"></i> Incident Response</a>
+                        <a href="../services/document-review.html" class="nav-dropdown-item"><i class="fas fa-file-shield"></i> Document Review</a>
+                        <a href="../services/clm.html" class="nav-dropdown-item"><i class="fas fa-file-contract"></i> CLM</a>
+                        <a href="../services/it-support.html" class="nav-dropdown-item"><i class="fas fa-headset"></i> IT Support</a>
+                    </div>
+                </div>
+                <a href="../blog.html" class="nav-link active">Blog</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+                <a href="../contact.html" class="nav-btn">Get Started</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <a href="../blog.html">Blog</a>
+                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                <span>Ransomware First 24 Hours</span>
+            </div>
+            <div class="article-hero-content">
+                <span class="article-category-tag"><i class="fas fa-user-shield"></i> Incident Response</span>
+                <h1>Ransomware Attack? First 24 Hours Playbook for US Businesses</h1>
+                <p>The decisions you make in the first 24 hours of a ransomware attack determine whether you recover quickly or face catastrophic losses. This hour-by-hour playbook covers technical response, legal notifications, communication strategy, and critical mistakes to avoid.</p>
+                <div class="article-meta-bar">
+                    <div class="meta-item meta-author"><div class="meta-author-avatar">TS</div><span>Trouble Shooters Team</span></div>
+                    <div class="meta-item"><i class="fas fa-calendar"></i> November 22, 2024</div>
+                    <div class="meta-item"><i class="fas fa-clock"></i> 9 min read</div>
+                    <div class="meta-item"><i class="fas fa-eye"></i> 3.1k views</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="article-layout">
+        <aside class="share-sidebar">
+            <div class="share-title">Share Article</div>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://troubleshooter.co.in/blog/ransomware-first-24-hours.html" target="_blank" class="share-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com/intent/tweet?url=https://troubleshooter.co.in/blog/ransomware-first-24-hours.html&text=Ransomware First 24 Hours Playbook" target="_blank" class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://wa.me/?text=Critical ransomware playbook: https://troubleshooter.co.in/blog/ransomware-first-24-hours.html" target="_blank" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://troubleshooter.co.in/blog/ransomware-first-24-hours.html" target="_blank" class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                <button onclick="copyLink()" class="share-btn copy" id="copyBtn"><i class="fas fa-link"></i> Copy Link</button>
+            </div>
+        </aside>
+
+        <main class="article-content">
+            <div class="article-banner"><i class="fas fa-user-shield"></i></div>
+
+            <p>It's <strong>2 AM on a Tuesday</strong>. Your phone rings. Your IT manager is panicking — files across the network are being encrypted, servers are inaccessible, and a ransom note demands <strong>$2 million in Bitcoin</strong> within 72 hours.</p>
+
+            <p>What you do in the <strong>next 24 hours</strong> will determine whether your business survives this attack or becomes another statistic. Ransomware attacks have surged <strong>13% year-over-year</strong>, with the average ransom demand now exceeding <strong>$1.5 million</strong> and total recovery costs averaging <strong>$2.73 million</strong>.</p>
+
+            <div class="highlight-box warning">
+                <div class="box-title"><i class="fas fa-triangle-exclamation"></i> Critical Warning</div>
+                <p><strong>DO NOT</strong> immediately shut down all systems, wipe infected machines, or pay the ransom without expert guidance. These reactive decisions often <strong>destroy forensic evidence</strong> and <strong>worsen the situation</strong>.</p>
+            </div>
+
+            <h2 id="key-stats">Ransomware by the Numbers</h2>
+            <div class="article-stats">
+                <div class="stat-box"><span class="stat-box-number">$1.5M</span><span class="stat-box-label">Average Ransom Demand</span></div>
+                <div class="stat-box"><span class="stat-box-number">$2.73M</span><span class="stat-box-label">Avg Recovery Cost</span></div>
+                <div class="stat-box"><span class="stat-box-number">24 Days</span><span class="stat-box-label">Avg Downtime</span></div>
+            </div>
+
+            <h2 id="hour-0-1">Hour 0-1: Initial Detection & Containment</h2>
+
+            <h3>1. Confirm the Attack is Real</h3>
+            <p>Before sounding alarms, verify this is actually ransomware:</p>
+            <ul>
+                <li>Look for <strong>ransom notes</strong> on desktops or in folders (usually .txt, .html files)</li>
+                <li>Check for <strong>file extensions changed</strong> (.locked, .encrypted, .crypto, random extensions)</li>
+                <li>Verify <strong>files cannot be opened</strong> — corrupted appearance</li>
+                <li>Notice <strong>unusual system behavior</strong> (high CPU, slow performance, popup windows)</li>
+            </ul>
+
+            <h3>2. ISOLATE — Don't Power Off</h3>
+            <p>The single most important first action: <strong>isolate infected systems from the network</strong>.</p>
+            <ul>
+                <li><strong>Disconnect network cables</strong> from infected machines</li>
+                <li><strong>Disable Wi-Fi adapters</strong></li>
+                <li><strong>Segment your network</strong> — block infected subnets at firewalls</li>
+                <li><strong>Disable shared drives</strong> and remove network access</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <div class="box-title"><i class="fas fa-power-off"></i> NEVER Power Off Infected Systems</div>
+                <p>Shutting down loses critical <strong>volatile memory (RAM)</strong> evidence including encryption keys that might recover your data. Disconnect from network instead — keep machines powered ON.</p>
+            </div>
+
+            <h3>3. Activate Your Incident Response Team</h3>
+            <ul>
+                <li><strong>CISO/IT Director</strong> — Technical lead</li>
+                <li><strong>CEO/Owner</strong> — Decision authority</li>
+                <li><strong>Legal Counsel</strong> — Notification obligations</li>
+                <li><strong>Communications Lead</strong> — Internal/external messaging</li>
+                <li><strong>HR Director</strong> — Employee coordination</li>
+                <li><strong>External IR Firm</strong> — Get them on the line immediately</li>
+            </ul>
+
+            <h2 id="hour-1-4">Hour 1-4: Assessment & Expert Engagement</h2>
+
+            <h3>4. Call Cyber Insurance Carrier</h3>
+            <p>If you have cyber insurance, <strong>call your carrier first</strong> before any major decisions. Why this matters:</p>
+            <ul>
+                <li>They likely require <strong>their approved vendors</strong> for IR, negotiation, forensics</li>
+                <li>Using unauthorized vendors can <strong>void your coverage</strong></li>
+                <li>They have <strong>24/7 hotlines</strong> with experienced breach coaches</li>
+                <li>Pre-approved <strong>ransom payment processes</strong> if needed</li>
+            </ul>
+
+            <h3>5. Engage Professional Incident Response</h3>
+            <p>Unless you have a deeply experienced internal team, <strong>get expert help immediately</strong>:</p>
+            <ul>
+                <li><strong>Incident response firm</strong> for containment, forensics, recovery</li>
+                <li><strong>Breach coach attorney</strong> for legal strategy and privilege protection</li>
+                <li><strong>Ransomware negotiator</strong> (if payment becomes necessary)</li>
+                <li><strong>Public relations firm</strong> for high-profile incidents</li>
+            </ul>
+
+            <h3>6. Initial Scope Assessment</h3>
+            <p>Begin understanding the attack's scope:</p>
+            <ul>
+                <li>How many systems are <strong>encrypted</strong>?</li>
+                <li>What <strong>data was potentially accessed</strong> or exfiltrated?</li>
+                <li>Are <strong>backups intact</strong> or also encrypted?</li>
+                <li>What's the <strong>ransomware variant</strong>? (Conti, LockBit, BlackCat, etc.)</li>
+                <li>How did the attackers <strong>get in</strong>? (phishing, RDP, vulnerability)</li>
+            </ul>
+
+            <h3>7. Preserve Evidence</h3>
+            <p>Critical for forensics, insurance claims, and law enforcement:</p>
+            <ul>
+                <li><strong>Screenshot ransom notes</strong> and any communications</li>
+                <li><strong>Document timeline</strong> of detection and observations</li>
+                <li><strong>Preserve logs</strong> (firewall, AV, EDR, server logs)</li>
+                <li><strong>Image affected systems</strong> for forensic analysis</li>
+                <li><strong>Save sample encrypted files</strong> for decryption attempts</li>
+            </ul>
+
+            <h2 id="hour-4-12">Hour 4-12: Notifications & Stabilization</h2>
+
+            <h3>8. Notify Law Enforcement</h3>
+            <p>Report to authorities — this is increasingly required and beneficial:</p>
+            <ul>
+                <li><strong>FBI:</strong> Submit at IC3.gov or call local field office</li>
+                <li><strong>CISA:</strong> Report at cisa.gov/report (required for critical infrastructure)</li>
+                <li><strong>Secret Service:</strong> Has cyber fraud task forces nationwide</li>
+                <li><strong>State Attorney General:</strong> Per state breach laws</li>
+            </ul>
+
+            <div class="highlight-box success">
+                <div class="box-title"><i class="fas fa-circle-check"></i> Why Report?</div>
+                <p>The FBI may have <strong>decryption keys</strong> from previous takedowns. CISA provides <strong>technical guidance</strong>. Reports help build cases against threat actors. <strong>Cooperation is required</strong> for many regulatory exemptions.</p>
+            </div>
+
+            <h3>9. Assess Regulatory Notification Obligations</h3>
+            <p>Depending on data accessed, you may have strict notification deadlines:</p>
+            <ul>
+                <li><strong>HIPAA:</strong> 60 days if PHI involved (<a href="hipaa-compliance-guide.html">see HIPAA guide</a>)</li>
+                <li><strong>State breach laws:</strong> Varies — California requires "expedient" notice</li>
+                <li><strong>GDPR:</strong> 72 hours if EU residents affected</li>
+                <li><strong>SEC:</strong> Material incidents within 4 business days for public companies</li>
+                <li><strong>Industry-specific:</strong> NY DFS (72 hours), FERPA, GLBA</li>
+            </ul>
+
+            <h3>10. Internal Communications</h3>
+            <p>Communicate carefully but transparently with employees:</p>
+            <ul>
+                <li><strong>Initial announcement:</strong> "We're experiencing a cybersecurity incident"</li>
+                <li><strong>Do NOT detail</strong> the attack technically or speculate</li>
+                <li><strong>Provide clear guidance:</strong> Don't touch systems, don't discuss externally</li>
+                <li><strong>Use out-of-band communication</strong> (personal email, phone, Signal)</li>
+                <li><strong>Designate single spokesperson</strong> for all questions</li>
+            </ul>
+
+            <h3>11. Customer & Stakeholder Communications</h3>
+            <p>Plan communications carefully — premature or wrong messaging causes lasting damage:</p>
+            <ul>
+                <li><strong>Don't disclose</strong> until you have facts</li>
+                <li><strong>Coordinate with legal</strong> on all external statements</li>
+                <li><strong>Prepare for media inquiries</strong> with prepared statements</li>
+                <li><strong>Update customers</strong> on service availability without technical details</li>
+                <li><strong>Plan formal breach notifications</strong> for affected individuals</li>
+            </ul>
+
+            <h2 id="hour-12-24">Hour 12-24: Strategic Decisions & Recovery Planning</h2>
+
+            <h3>12. The Ransom Decision</h3>
+            <p>Should you pay the ransom? This is one of the hardest decisions in business. Consider:</p>
+
+            <h4>Arguments Against Paying</h4>
+            <ul>
+                <li><strong>No guarantee</strong> of decryption (only 65% receive working keys)</li>
+                <li>Funds <strong>criminal organizations</strong> and terror groups</li>
+                <li>Marks you as a <strong>willing payer</strong> — high repeat attack risk</li>
+                <li>Potential <strong>OFAC sanctions violations</strong> if paying sanctioned groups</li>
+                <li>Data may be <strong>leaked anyway</strong> in double-extortion attacks</li>
+            </ul>
+
+            <h4>Arguments For Paying</h4>
+            <ul>
+                <li><strong>Faster recovery</strong> than rebuilding from scratch</li>
+                <li><strong>Business survival</strong> when no backups exist</li>
+                <li><strong>Patient safety</strong> in healthcare contexts</li>
+                <li><strong>Insurance covers</strong> the payment</li>
+                <li><strong>Prevents data leak</strong> in extortion-only attacks</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <div class="box-title"><i class="fas fa-triangle-exclamation"></i> OFAC Sanctions Risk</div>
+                <p>Paying ransom to <strong>sanctioned threat actors</strong> can result in massive fines, even if you didn't know they were sanctioned. <strong>Always engage a ransomware negotiator</strong> who can verify the threat actor.</p>
+            </div>
+
+            <h3>13. Backup Recovery Assessment</h3>
+            <p>Determine if backups are viable:</p>
+            <ul>
+                <li><strong>Verify backup integrity</strong> — are they encrypted or corrupted?</li>
+                <li><strong>Check air-gapped/offline backups</strong> first (most likely safe)</li>
+                <li><strong>Test restoration</strong> in isolated environment before mass recovery</li>
+                <li><strong>Determine RPO</strong> — how much data loss is acceptable?</li>
+                <li><strong>Estimate RTO</strong> — how long will full recovery take?</li>
+            </ul>
+
+            <h3>14. Develop Recovery Strategy</h3>
+            <p>Build a phased recovery plan:</p>
+            <ul>
+                <li><strong>Phase 1:</strong> Restore critical business functions (24-72 hours)</li>
+                <li><strong>Phase 2:</strong> Recover important but non-critical systems (1-2 weeks)</li>
+                <li><strong>Phase 3:</strong> Complete restoration and validation (2-4 weeks)</li>
+                <li><strong>Phase 4:</strong> Post-incident hardening (ongoing)</li>
+            </ul>
+
+            <h3>15. Begin Forensic Investigation</h3>
+            <p>Understanding the attack is crucial for recovery and prevention:</p>
+            <ul>
+                <li><strong>Identify initial access vector</strong> (phishing, RDP, vulnerability)</li>
+                <li><strong>Map lateral movement</strong> across the network</li>
+                <li><strong>Determine data exfiltration</strong> — what was stolen?</li>
+                <li><strong>Identify persistence mechanisms</strong> attackers may have planted</li>
+                <li><strong>Find all infected systems</strong> — including dormant footholds</li>
+            </ul>
+
+            <div class="article-cta">
+                <h3>Facing a Ransomware Attack Right Now?</h3>
+                <p>Our 24/7 incident response team can be engaged within minutes to help contain the attack, preserve evidence, coordinate with law enforcement, and guide your recovery decisions.</p>
+                <a href="../contact.html" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Get Emergency IR Support</a>
+            </div>
+
+            <h2 id="critical-mistakes">Critical Mistakes to Avoid</h2>
+
+            <h3>1. Wiping Infected Systems Too Soon</h3>
+            <p>You destroy forensic evidence, decryption keys in memory, and clues about the attack scope.</p>
+
+            <h3>2. Restoring from Compromised Backups</h3>
+            <p>Many attackers compromise backups weeks before deploying ransomware. Restoring without verification reinfects you.</p>
+
+            <h3>3. Communicating on Compromised Channels</h3>
+            <p>Attackers may be monitoring your email and Teams. Use <strong>out-of-band communication</strong> exclusively during response.</p>
+
+            <h3>4. Premature Public Disclosure</h3>
+            <p>Saying too much too early creates legal exposure, contradicts later facts, and damages stakeholder trust.</p>
+
+            <h3>5. Negotiating Without Expert Help</h3>
+            <p>Inexperienced negotiation increases ransom demands, signals desperation, and may violate sanctions laws.</p>
+
+            <h3>6. Skipping Legal Counsel</h3>
+            <p>Attorney-client privilege protects forensic findings. Without legal involvement, your investigation becomes discoverable in lawsuits.</p>
+
+            <h3>7. Forgetting About Compliance</h3>
+            <p>Regulatory deadlines start ticking from <strong>discovery</strong>. Missing notification windows compounds the disaster with regulatory penalties.</p>
+
+            <h2 id="essential-contacts">Essential Contacts to Have Ready</h2>
+            <p>Build this contact list <strong>before</strong> you need it:</p>
+            <ul>
+                <li><strong>Incident Response Firm</strong> — 24/7 hotline number</li>
+                <li><strong>Cyber Insurance Carrier</strong> — Claims hotline</li>
+                <li><strong>Breach Coach Attorney</strong> — Legal counsel</li>
+                <li><strong>FBI Cyber Division</strong> — Local field office</li>
+                <li><strong>CISA</strong> — Federal coordination</li>
+                <li><strong>Public Relations Firm</strong> — Crisis communications</li>
+                <li><strong>Ransomware Negotiator</strong> — If payment considered</li>
+                <li><strong>Forensic Imaging Service</strong> — Evidence preservation</li>
+            </ul>
+
+            <h2 id="prevention">After the Crisis: Prevention is Everything</h2>
+            <p>The first 24 hours are about survival. The next 24 weeks are about ensuring it never happens again:</p>
+            <ul>
+                <li><strong>Immutable backups</strong> stored offline/air-gapped</li>
+                <li><strong>Endpoint Detection & Response (EDR)</strong> on every device</li>
+                <li><strong>Multi-Factor Authentication (MFA)</strong> everywhere</li>
+                <li><strong>Email security gateway</strong> with advanced threat protection</li>
+                <li><strong>Network segmentation</strong> to prevent lateral movement</li>
+                <li><strong>Regular vulnerability scanning</strong> and patching</li>
+                <li><strong>Security awareness training</strong> for all employees</li>
+                <li><strong>Tested incident response plan</strong> with annual tabletop exercises</li>
+                <li><strong>Cyber insurance</strong> with adequate coverage limits</li>
+                <li><strong>Zero Trust architecture</strong> implementation</li>
+            </ul>
+
+            <div class="highlight-box success">
+                <div class="box-title"><i class="fas fa-circle-check"></i> The Ultimate Lesson</div>
+                <p>The organizations that recover quickly from ransomware are those that <strong>prepared before the attack</strong>. Build your incident response plan, test it regularly, and establish relationships with IR firms <strong>before</strong> you need them at 2 AM.</p>
+            </div>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>A ransomware attack is one of the most stressful events any business can face. The pressure to make quick decisions, restore operations, and protect the company is immense. But the choices made in those first 24 hours have <strong>cascading effects for months and years</strong>.</p>
+
+            <p>The playbook is clear: <strong>isolate, don't shut down. Get experts, don't go it alone. Document everything. Communicate carefully. Make strategic decisions, not panic responses.</strong></p>
+
+            <p>Most importantly, remember that <strong>preparation is your best defense</strong>. Every dollar spent on prevention, backup integrity, and incident response readiness saves $10 to $100 in recovery costs. The best time to prepare for a ransomware attack was yesterday. <strong>The second best time is now</strong>.</p>
+
+            <div class="author-card">
+                <div class="author-card-avatar">TS</div>
+                <div class="author-card-info">
+                    <h4>Trouble Shooters Team</h4>
+                    <p>Our 24/7 incident response team has handled hundreds of ransomware incidents across healthcare, finance, manufacturing, and professional services. We provide rapid containment, forensic investigation, ransomware negotiation, and complete recovery support.</p>
+                </div>
+            </div>
+
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-grid">
+                    <a href="hipaa-compliance-guide.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-hospital"></i></div>
+                        <h4>HIPAA Compliance Guide for Healthcare</h4>
+                        <p>HIPAA · 10 min read</p>
+                    </a>
+                    <a href="hitech-act-healthcare.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-heart-pulse"></i></div>
+                        <h4>HITECH Act: Strengthening HIPAA</h4>
+                        <p>HIPAA / HITECH · 6 min read</p>
+                    </a>
+                    <a href="pii-vs-phi-guide.html" class="related-card">
+                        <div class="related-card-icon"><i class="fas fa-database"></i></div>
+                        <h4>PII vs PHI: Data Classification Guide</h4>
+                        <p>Data Classification · 7 min read</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <aside class="toc-sidebar">
+            <div class="toc-card">
+                <div class="toc-card-title"><i class="fas fa-list"></i> In This Article</div>
+                <ul>
+                    <li><a href="#key-stats" class="toc-link">Ransomware by Numbers</a></li>
+                    <li><a href="#hour-0-1" class="toc-link">Hour 0-1: Containment</a></li>
+                    <li><a href="#hour-1-4" class="toc-link">Hour 1-4: Assessment</a></li>
+                    <li><a href="#hour-4-12" class="toc-link">Hour 4-12: Notifications</a></li>
+                    <li><a href="#hour-12-24" class="toc-link">Hour 12-24: Strategy</a></li>
+                    <li><a href="#critical-mistakes" class="toc-link">Critical Mistakes</a></li>
+                    <li><a href="#essential-contacts" class="toc-link">Essential Contacts</a></li>
+                    <li><a href="#prevention" class="toc-link">Prevention</a></li>
+                    <li><a href="#conclusion" class="toc-link">Conclusion</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="../images/logo.png" alt="Trouble Shooters" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">TROUBLE SHOOTERS</span>
+                            <span class="footer-brand-tagline">Cyber Security Experts</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for e-Discovery, Cyber Security, and IT Support Services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/ediscovery.html">e-Discovery</a></li>
+                        <li><a href="../services/data-breach-response.html">Data Breach Response</a></li>
+                        <li><a href="../services/incident-response.html">Cyber Incident Response</a></li>
+                        <li><a href="../services/document-review.html">Document Review</a></li>
+                        <li><a href="../services/clm.html">CLM</a></li>
+                        <li><a href="../services/it-support.html">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@troubleshooter.co.in</p>
+                        <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                        <p><i class="fas fa-location-dot"></i> India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trouble Shooters. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/blog-post.js"></script>
+</body>
+</html>
